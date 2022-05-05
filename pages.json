@@ -1,0 +1,64 @@
+{
+	// 页面设置
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+	    ,{
+            "path" : "pages/myself/myself",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	
+	// 全局配置
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#5BBD8C",
+		// 下拉刷新
+		"enablePullDownRefresh": true,
+		"backgroundTextStyle": "light"
+	},
+	
+	// 底部框
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#5BBD8C",
+		"borderStyle": "black",
+		"backgroundColor": "#F8F8F8",
+		"list": [{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabBar/home.png",
+				"selectedIconPath": "static/tabBar/home_activate.png"
+			},
+			{
+				"text": "个人",
+				"pagePath": "pages/myself/myself",
+				"iconPath": "static/tabBar/personal.png",
+				"selectedIconPath": "static/tabBar/personal_activate.png"
+			}
+		]
+	},
+	
+	// 启动模式
+	"condition": {
+		"current": 0,
+		"list": [
+			{
+				"name": "详情页",
+				"path": "pages/myself/myself",
+				"query": "id=80"
+			}
+		]
+	}
+}
