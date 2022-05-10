@@ -1,0 +1,2 @@
+# BloodPressureMeasurementRecordMiniProgram
+高血压记录小程序前端，采用vue3，Uniapp框架，Uview组件编写。

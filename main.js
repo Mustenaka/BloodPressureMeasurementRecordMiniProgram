@@ -1,4 +1,5 @@
 import App from './App'
+// main.js
 
 // #ifndef VUE3
 import Vue from 'vue'
@@ -19,3 +20,4 @@ export function createApp() {
   }
 }
 // #endif
+
