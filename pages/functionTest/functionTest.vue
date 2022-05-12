@@ -1,5 +1,5 @@
 <template>
-	<button></button>
+	<view>function Test</view>
 </template>
 
 <script>

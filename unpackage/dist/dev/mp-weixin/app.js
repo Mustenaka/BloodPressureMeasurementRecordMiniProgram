@@ -5,6 +5,7 @@ var common_vendor = require("./common/vendor.js");
 if (!Math) {
   "./pages/index/index.js";
   "./pages/myself/myself.js";
+  "./pages/functionTest/functionTest.js";
 }
 const _sfc_main = {
   onLaunch: function() {

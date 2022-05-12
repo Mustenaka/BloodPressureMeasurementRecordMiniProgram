@@ -8,19 +8,39 @@
 				</swiper-item>
 			</swiper>
 		</view>
+		
 		<!-- 中部选择框 -->
 		<view class="box">
 			<view class="item">
-				
-				<uni-icons customPrefix="compose" type="icon-youxi" size="15" @click=""></uni-icons>
-				<text>11111</text>
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatwrite" size="30" @click="toTestPage"></uni-icons>
+				<text>血压录入</text>
+			</view>
+			<view class="item">
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatziyuan" size="30" @click="toTestPage"></uni-icons>
+				<text>我的血压情况</text>
+			</view>
+			<view class="item">
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatjiankangfangan" size="30" @click="toTestPage"></uni-icons>
+				<text>我的治疗方案</text>
+			</view>
+			<view class="item">
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatbaogao-copy" size="30" @click="toTestPage"></uni-icons>
+				<text>我的检查报告</text>
+			</view>
+			<view class="item">
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatpaizhao" size="30" @click="toTestPage"></uni-icons>
+				<text>拍照上传</text>
+			</view>
+			<view class="item">
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechattongue" size="30" @click="toTestPage"></uni-icons>
+				<text>舌苔脉象</text>
 			</view>
 		</view>
+		
 		<!-- 尾部空白框，计划留作公司信息展示框 -->
 		<view class="box" style="margin-top: 30px;">
-			
+			<text class="slogan">高血压健康记录小程序 - 守护您的健康</text>
 		</view>
-
 	</view>
 </template>
 
@@ -28,6 +48,7 @@
 	export default {
 		data() {
 			return {
+				// 轮播图列表
 				swiperList: [
 					'../../static/swiper/swiper1.png',
 				],
@@ -37,12 +58,14 @@
 
 		},
 		methods: {
-			gonavigate(){
-			        uni.navigateTo({
-			            //保留当前页面，跳转到应用内的某个页面
-			            url: '/pages/myself/myself'
-			        })
-			    }
+			toTestPage(){
+				uni.navigateTo({
+					//保留当前页面，跳转到应用内的某个页面
+					url: '/pages/functionTest/functionTest',
+					animationType:"pop-in",
+					animationDuration:200,
+				});
+			}
 		}
 	}
 </script>
@@ -78,14 +101,29 @@
 			width: 700rpx;
 			padding:60rpx 25rpx ;
 			
-			box-shadow:
-			  9px 10px 16px rgba(0, 0, 0, 0.5)
-			;
-			box-sizing: border-box;		}
+			box-shadow: 9px 10px 16px rgba(0, 0, 0, 0.5);
+			box-sizing: border-box;		
+		}
 		.item{
 			width: 33.3%;
+			
+			display: flex;
+			box-sizing: border-box;
+
+			margin: 2rpx 0;
+			padding: 10rpx;
+			
+			align-items: center;
 			text-align: center;
-			margin: 30rpx 0;
-		}	
+			
+			line-height: 60rpx;
+			flex-direction: column;
+			font-weight: 550;	// 400 is normal 700 is bold
+			font-size: 80%;
+			
+		}
+		.slogan{
+			font-size: 9pt;
+		}
 	}
 </style>
