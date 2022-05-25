@@ -2,21 +2,62 @@
 	// 页面设置
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/wechatLogin/wechatLogin",
+			"style": {
+				"navigationBarTitleText": "微信登录",
+				"enablePullDownRefresh": false
+			}
+		}, {
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "血压健康记录小程序",
+				"navigationBarTitleText": "血压健康记录小程序"
 			}
 		}, {
 			"path": "pages/myself/myself",
 			"style": {
-				"navigationBarTitleText": "我的",
+				"navigationBarTitleText": "我的"
 			}
-		}, {
+		}, { // 测试页面
 			"path": "pages/functionTest/functionTest",
 			"style": {
 				"navigationBarTitleText": "功能测试页面"
 			}
-		},
+		}, {
+			"path": "pages/BpRecord/BpRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/BpChart/BpChart",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/TreatmentPlan/TreatmentPlan",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/PatientInfo/PatientInfo",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
 	],
 
 	// 全局配置
@@ -56,7 +97,7 @@
 		"current": 0,
 		"list": [{
 			"name": "详情页",
-			"path": "pages/myself/myself",
+			"path": "pages/wechatLogin/wechatLogin",
 			"query": "id=80"
 		}]
 	}

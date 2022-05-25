@@ -1,8 +1,14 @@
 {
   "pages": [
+    "pages/wechatLogin/wechatLogin",
     "pages/index/index",
     "pages/myself/myself",
-    "pages/functionTest/functionTest"
+    "pages/functionTest/functionTest",
+    "pages/BpRecord/BpRecord",
+    "pages/BpChart/BpChart",
+    "pages/TreatmentPlan/TreatmentPlan",
+    "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+    "pages/PatientInfo/PatientInfo"
   ],
   "window": {
     "navigationBarTextStyle": "black",

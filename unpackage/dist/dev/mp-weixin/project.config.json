@@ -8,7 +8,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "",
-  "appid": "touristappid",
+  "appid": "wxa2164c390f287f1c",
   "projectname": "BloodPressureMeasurementRecordMiniProgram",
   "condition": {
     "search": {
@@ -30,7 +30,7 @@
           "name": "详情页",
           "query": "id=80",
           "id": 0,
-          "pathName": "pages/myself/myself"
+          "pathName": "pages/wechatLogin/wechatLogin"
         }
       ]
     }

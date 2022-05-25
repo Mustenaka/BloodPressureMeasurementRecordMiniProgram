@@ -3,9 +3,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports[Symbol.toStringTag] = "Module";
 var common_vendor = require("./common/vendor.js");
 if (!Math) {
+  "./pages/wechatLogin/wechatLogin.js";
   "./pages/index/index.js";
   "./pages/myself/myself.js";
   "./pages/functionTest/functionTest.js";
+  "./pages/BpRecord/BpRecord.js";
+  "./pages/BpChart/BpChart.js";
+  "./pages/TreatmentPlan/TreatmentPlan.js";
+  "./pages/TreatmentPlanHistory/TreatmentPlanHistory.js";
+  "./pages/PatientInfo/PatientInfo.js";
 }
 const _sfc_main = {
   onLaunch: function() {

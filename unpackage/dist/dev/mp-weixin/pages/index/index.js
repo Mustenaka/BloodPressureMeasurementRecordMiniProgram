@@ -11,7 +11,7 @@ const _sfc_main = {
   onLoad() {
   },
   methods: {
-    gonavigate() {
+    toTestPage() {
       common_vendor.index.navigateTo({
         url: "/pages/functionTest/functionTest",
         animationType: "pop-in",
@@ -36,33 +36,38 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         b: index
       };
     }),
-    b: common_vendor.o($options.gonavigate),
+    b: common_vendor.o($options.toTestPage),
     c: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatwrite",
       size: "30"
     }),
-    d: common_vendor.p({
+    d: common_vendor.o($options.toTestPage),
+    e: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatziyuan",
       size: "30"
     }),
-    e: common_vendor.p({
+    f: common_vendor.o($options.toTestPage),
+    g: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatjiankangfangan",
       size: "30"
     }),
-    f: common_vendor.p({
+    h: common_vendor.o($options.toTestPage),
+    i: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatbaogao-copy",
       size: "30"
     }),
-    g: common_vendor.p({
+    j: common_vendor.o($options.toTestPage),
+    k: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatpaizhao",
       size: "30"
     }),
-    h: common_vendor.p({
+    l: common_vendor.o($options.toTestPage),
+    m: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechattongue",
       size: "30"
