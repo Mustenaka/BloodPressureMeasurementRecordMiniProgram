@@ -29,6 +29,12 @@
           "pathName": "pages/TreatmentPlan/TreatmentPlan",
           "query": "id=81",
           "scene": null
+        },
+        {
+          "name": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+          "pathName": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+          "query": "id=82",
+          "scene": null
         }
       ]
     }
