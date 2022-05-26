@@ -96,9 +96,17 @@
 	"condition": {
 		"current": 0,
 		"list": [{
-			"name": "详情页",
-			"path": "pages/wechatLogin/wechatLogin",
+			"name": "血压记录",
+			"path": "pages/BpRecord/BpRecord",
 			"query": "id=80"
+		}, {
+			"name": "治疗方案",
+			"path": "pages/TreatmentPlan/TreatmentPlan",
+			"query": "id=81"
+		}, {
+			"name": "历史治疗方案",
+			"path": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+			"query": "id=82"
 		}]
 	}
 }

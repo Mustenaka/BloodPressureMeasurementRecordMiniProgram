@@ -1,0 +1,36 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "详情页",
+          "pathName": "pages/wechatLogin/wechatLogin",
+          "query": "id=80"
+        },
+        {
+          "name": "pages/BpRecord/BpRecord",
+          "pathName": "pages/BpRecord/BpRecord",
+          "query": "id=80",
+          "scene": null
+        },
+        {
+          "name": "pages/TreatmentPlan/TreatmentPlan",
+          "pathName": "pages/TreatmentPlan/TreatmentPlan",
+          "query": "id=81",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
