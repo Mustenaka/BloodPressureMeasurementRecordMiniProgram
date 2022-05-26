@@ -8,12 +8,31 @@ const _sfc_main = {
       ]
     };
   },
-  onLoad() {
-  },
   methods: {
     toTestPage() {
       common_vendor.index.navigateTo({
         url: "/pages/functionTest/functionTest",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
+    },
+    toBpRecord() {
+      common_vendor.index.navigateTo({
+        url: "/pages/BpRecord/BpRecord",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
+    },
+    toBpChart() {
+      common_vendor.index.navigateTo({
+        url: "/pages/BpChart/BpChart",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
+    },
+    toTreatmentPlan() {
+      common_vendor.index.navigateTo({
+        url: "/pages/TreatmentPlan/TreatmentPlan",
         animationType: "pop-in",
         animationDuration: 200
       });
@@ -36,19 +55,19 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         b: index
       };
     }),
-    b: common_vendor.o($options.toTestPage),
+    b: common_vendor.o($options.toBpRecord),
     c: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatwrite",
       size: "30"
     }),
-    d: common_vendor.o($options.toTestPage),
+    d: common_vendor.o($options.toBpChart),
     e: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatziyuan",
       size: "30"
     }),
-    f: common_vendor.o($options.toTestPage),
+    f: common_vendor.o($options.toTreatmentPlan),
     g: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatjiankangfangan",

@@ -12,15 +12,15 @@
 		<!-- 中部选择框 -->
 		<view class="box">
 			<view class="item">
-				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatwrite" size="30" @click="toTestPage"></uni-icons>
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatwrite" size="30" @click="toBpRecord"></uni-icons>
 				<text>血压录入</text>
 			</view>
 			<view class="item">
-				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatziyuan" size="30" @click="toTestPage"></uni-icons>
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatziyuan" size="30" @click="toBpChart"></uni-icons>
 				<text>我的血压情况</text>
 			</view>
 			<view class="item">
-				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatjiankangfangan" size="30" @click="toTestPage"></uni-icons>
+				<uni-icons customPrefix="iconfont" type="icon-bpr-wechatjiankangfangan" size="30" @click="toTreatmentPlan"></uni-icons>
 				<text>我的治疗方案</text>
 			</view>
 			<view class="item">
@@ -54,9 +54,6 @@
 				],
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
 			toTestPage(){
 				uni.navigateTo({
@@ -65,7 +62,31 @@
 					animationType:"pop-in",
 					animationDuration:200,
 				});
-			}
+			},
+			toBpRecord(){
+				uni.navigateTo({
+					//保留当前页面，跳转到应用内的某个页面
+					url: '/pages/BpRecord/BpRecord',
+					animationType:"pop-in",
+					animationDuration:200,
+				});
+			},
+			toBpChart(){
+				uni.navigateTo({
+					//保留当前页面，跳转到应用内的某个页面
+					url: '/pages/BpChart/BpChart',
+					animationType:"pop-in",
+					animationDuration:200,
+				});
+			},
+			toTreatmentPlan(){
+				uni.navigateTo({
+					//保留当前页面，跳转到应用内的某个页面
+					url: '/pages/TreatmentPlan/TreatmentPlan',
+					animationType:"pop-in",
+					animationDuration:200,
+				});
+			},
 		}
 	}
 </script>

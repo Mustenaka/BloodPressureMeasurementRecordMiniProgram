@@ -1,9 +1,22 @@
 <template>
-	<view class="content">
-		<h1>微信登录</h1>
-		<view class="text-area">
+	<view class="home">
+		<!-- 首部轮播图 -->
+		<view class="header">
+			<swiper :indicator-dots="true" :autoplay="true" :interval="5000" :duration="1000">
+				<swiper-item v-for="(item, index) in swiperList" :key="index">
+					<image  class="swiper-image" :src="item" mode="aspectFill"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+		
+		<view class="box">
 			<button class="button-style" type="primary" @click="login">微信登录</button>
 			<button class="button-style" type="primary" @click="register">微信注册</button>
+		</view>
+		
+		<!-- 尾部空白框，计划留作公司信息展示框 -->
+		<view class="box" style="margin-top: 30px;">
+			<text class="slogan">高血压健康记录小程序 - 守护您的健康</text>
 		</view>
 	</view>
 </template>
@@ -11,7 +24,12 @@
 <script>
 	export default {
 		data() {
-			return { }
+			return {
+				// 轮播图列表
+				swiperList: [
+					'../../static/swiper/swiper2.png',
+				],
+			}
 		},
 		created() {
 			console.log("create触发")
@@ -180,37 +198,60 @@
 	}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-	
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-	
-	.text-area {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-	}
-	
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
-	
-	.button-style {
-/* 		height: 300rpx;
-		width: 200rpx; */
-		margin-top: 200rpx;
+<style lang="scss">
+	.home {
+		.swiper-image {
+			height: 250rpx;
+			width: 700rpx;
+			box-shadow: 1 1 10rpx rgba(0,0,0,1);
+			border-radius: 25rpx;
+		}
+		.body{
+			padding: 0 30rpx;
+			background-color: #ECECEC;
+		}
+		.header{
+			background-color: #6FAD8F;
+			padding: 25rpx;
+			padding-bottom: 60rpx;
+		}
+		.box{
+			background-color: #fff;
+			border-radius: 25rpx;
+			
+			margin: 0 30rpx;
+			margin-top: -50rpx;
+			
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			
+			width: 700rpx;
+			padding:60rpx 25rpx ;
+			
+			box-shadow: 9px 10px 16px rgba(0, 0, 0, 0.5);
+			box-sizing: border-box;		
+		}
+		.item{
+			width: 33.3%;
+			
+			display: flex;
+			box-sizing: border-box;
+
+			margin: 2rpx 0;
+			padding: 10rpx;
+			
+			align-items: center;
+			text-align: center;
+			
+			line-height: 60rpx;
+			flex-direction: column;
+			font-weight: 550;	// 400 is normal 700 is bold
+			font-size: 80%;
+			
+		}
+		.slogan{
+			font-size: 9pt;
+		}
 	}
 </style>
