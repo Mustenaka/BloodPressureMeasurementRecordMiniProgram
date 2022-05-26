@@ -1,1 +1,1 @@
-<view class="content"><text>微信登录</text><view class="text-area"><button style="margin-top:200rpx" type="primary" bindtap="{{a}}">微信登录</button></view></view>
+<view class="content"><view>微信登录</view><view class="text-area"><button class="button-style" type="primary" bindtap="{{a}}">微信登录</button><button class="button-style" type="primary" bindtap="{{b}}">微信注册</button></view></view>
