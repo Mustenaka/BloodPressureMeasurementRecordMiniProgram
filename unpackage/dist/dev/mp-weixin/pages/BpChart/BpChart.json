@@ -1,5 +1,8 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "血压记录表",
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "qiun-data-charts": "../../uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts",
+    "uni-number-box": "../../uni_modules/uni-number-box/components/uni-number-box/uni-number-box"
+  }
 }

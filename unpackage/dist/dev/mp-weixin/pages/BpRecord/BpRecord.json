@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "血压录入",
   "enablePullDownRefresh": false,
   "usingComponents": {
     "uni-datetime-picker": "../../uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker",

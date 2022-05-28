@@ -1,11 +1,11 @@
 {
   "pages": [
+    "pages/BpChart/BpChart",
     "pages/wechatLogin/wechatLogin",
     "pages/index/index",
     "pages/myself/myself",
     "pages/functionTest/functionTest",
     "pages/BpRecord/BpRecord",
-    "pages/BpChart/BpChart",
     "pages/TreatmentPlan/TreatmentPlan",
     "pages/TreatmentPlanHistory/TreatmentPlanHistory",
     "pages/PatientInfo/PatientInfo"
@@ -16,7 +16,8 @@
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#5BBD8C",
     "enablePullDownRefresh": true,
-    "backgroundTextStyle": "light"
+    "backgroundTextStyle": "light",
+    "disableScroll": true
   },
   "tabBar": {
     "color": "#7A7E83",

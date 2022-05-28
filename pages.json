@@ -2,6 +2,12 @@
 	// 页面设置
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/BpChart/BpChart",
+			"style": {
+				"navigationBarTitleText": "血压记录表",
+				"enablePullDownRefresh": false
+			}
+		}, {
 			"path": "pages/wechatLogin/wechatLogin",
 			"style": {
 				"navigationBarTitleText": "微信登录",
@@ -25,38 +31,27 @@
 		}, {
 			"path": "pages/BpRecord/BpRecord",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "血压录入",
 				"enablePullDownRefresh": false
 			}
-
-		}, {
-			"path": "pages/BpChart/BpChart",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-
 		}, {
 			"path": "pages/TreatmentPlan/TreatmentPlan",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "治疗方案",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "历史治疗方案",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/PatientInfo/PatientInfo",
 			"style": {
-				"navigationBarTitleText": "",
+				"navigationBarTitleText": "患者信息",
 				"enablePullDownRefresh": false
 			}
-
 		}
 	],
 
@@ -68,7 +63,9 @@
 		"backgroundColor": "#5BBD8C",
 		// 下拉刷新
 		"enablePullDownRefresh": true,
-		"backgroundTextStyle": "light"
+		"backgroundTextStyle": "light",
+		// 小程序禁止滚动
+		"disableScroll": true
 	},
 
 	// 底部框
@@ -96,6 +93,10 @@
 	"condition": {
 		"current": 0,
 		"list": [{
+			"name": "血压记录表",
+			"path": "pages/BpChart/BpChart",
+			"query": "id=79"
+		}, {
 			"name": "血压记录",
 			"path": "pages/BpRecord/BpRecord",
 			"query": "id=80"

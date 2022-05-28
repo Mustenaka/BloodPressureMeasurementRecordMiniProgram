@@ -27,10 +27,28 @@
       "current": 0,
       "list": [
         {
-          "name": "详情页",
-          "query": "id=80",
+          "name": "血压记录表",
+          "query": "id=79",
           "id": 0,
-          "pathName": "pages/wechatLogin/wechatLogin"
+          "pathName": "pages/BpChart/BpChart"
+        },
+        {
+          "name": "血压记录",
+          "query": "id=80",
+          "id": 1,
+          "pathName": "pages/BpRecord/BpRecord"
+        },
+        {
+          "name": "治疗方案",
+          "query": "id=81",
+          "id": 2,
+          "pathName": "pages/TreatmentPlan/TreatmentPlan"
+        },
+        {
+          "name": "历史治疗方案",
+          "query": "id=82",
+          "id": 3,
+          "pathName": "pages/TreatmentPlanHistory/TreatmentPlanHistory"
         }
       ]
     }
