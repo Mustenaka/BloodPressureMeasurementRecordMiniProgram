@@ -104,17 +104,15 @@
 			"style": {
 				"navigationBarTitleText": "功能测试页面"
 			}
+		}, {
+			"path": "pages/myself-detail/myself-detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
-	    ,{
-            "path" : "pages/myself-detail/myself-detail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 
 	// 全局配置
 	"globalStyle": {
