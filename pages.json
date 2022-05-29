@@ -2,12 +2,6 @@
 	// 页面设置
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/BpChart/BpChart",
-			"style": {
-				"navigationBarTitleText": "血压记录表",
-				"enablePullDownRefresh": false
-			}
-		}, {
 			"path": "pages/wechatLogin/wechatLogin",
 			"style": {
 				"navigationBarTitleText": "微信登录",
@@ -19,19 +13,15 @@
 				"navigationBarTitleText": "血压健康记录小程序"
 			}
 		}, {
-			"path": "pages/myself/myself",
-			"style": {
-				"navigationBarTitleText": "我的"
-			}
-		}, { // 测试页面
-			"path": "pages/functionTest/functionTest",
-			"style": {
-				"navigationBarTitleText": "功能测试页面"
-			}
-		}, {
 			"path": "pages/BpRecord/BpRecord",
 			"style": {
 				"navigationBarTitleText": "血压录入",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/BpChart/BpChart",
+			"style": {
+				"navigationBarTitleText": "血压记录表",
 				"enablePullDownRefresh": false
 			}
 		}, {
@@ -52,8 +42,71 @@
 				"navigationBarTitleText": "患者信息",
 				"enablePullDownRefresh": false
 			}
-		}
-	],
+		}, {
+			"path": "pages/myself/myself",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}, { // 测试页面
+			"path": "pages/functionTest/functionTest",
+			"style": {
+				"navigationBarTitleText": "功能测试页面"
+			}
+		},{
+            "path" : "pages/medicalReport/medicalReport",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/uploadPhoto/uploadPhoto",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/TongueDetail/TongueDetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/report-ECG/report-ECG",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/report-BPWithHeart/report-BPWithHeart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 
 	// 全局配置
 	"globalStyle": {
@@ -92,22 +145,31 @@
 	// 启动模式
 	"condition": {
 		"current": 0,
-		"list": [{
-			"name": "血压记录表",
-			"path": "pages/BpChart/BpChart",
-			"query": "id=79"
-		}, {
-			"name": "血压记录",
-			"path": "pages/BpRecord/BpRecord",
-			"query": "id=80"
-		}, {
-			"name": "治疗方案",
-			"path": "pages/TreatmentPlan/TreatmentPlan",
-			"query": "id=81"
-		}, {
-			"name": "历史治疗方案",
-			"path": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
-			"query": "id=82"
-		}]
+		"list": [
+			// A面
+			{
+				"name": "血压记录表",
+				"path": "pages/BpChart/BpChart",
+				"query": "id=79"
+			}, {
+				"name": "血压记录",
+				"path": "pages/BpRecord/BpRecord",
+				"query": "id=80"
+			}, {
+				"name": "治疗方案",
+				"path": "pages/TreatmentPlan/TreatmentPlan",
+				"query": "id=81"
+			}, {
+				"name": "历史治疗方案",
+				"path": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+				"query": "id=82"
+			},
+			// B面 
+			{
+				"name": "我的",
+				"path": "pages/myself/myself",
+				"query": "id=100"
+			}
+		]
 	}
 }

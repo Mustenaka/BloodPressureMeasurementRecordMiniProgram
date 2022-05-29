@@ -11,7 +11,15 @@
 		
 		<!-- 中部选择框 -->
 		<view class="box">
-
+			<view class="item">
+				<text @click="toBpRecord">我的账户</text>
+			</view>
+			<view class="item">
+				<text @click="toBpRecord">患者信息</text>
+			</view>
+			<view class="item">
+				<text @click="toBpRecord">推送设置</text>
+			</view>
 		</view>
 		
 		<!-- 尾部空白框，计划留作公司信息展示框 -->
@@ -103,13 +111,19 @@
 			box-sizing: border-box;		
 		}
 		.item{
-			width: 33.3%;
+			width: 100%;
+
+			border-style: solid;
+			border-width: 1px;
+			border-color: black;
+			border-radius: 20rpx;
+			box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.3);
 			
 			display: flex;
 			box-sizing: border-box;
 
-			margin: 2rpx 0;
-			padding: 10rpx;
+			margin: 8rpx 0;
+			padding: 16rpx;
 			
 			align-items: center;
 			text-align: center;

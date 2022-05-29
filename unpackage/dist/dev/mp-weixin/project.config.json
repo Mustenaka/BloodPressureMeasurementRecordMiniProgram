@@ -49,6 +49,12 @@
           "query": "id=82",
           "id": 3,
           "pathName": "pages/TreatmentPlanHistory/TreatmentPlanHistory"
+        },
+        {
+          "name": "我的",
+          "query": "id=100",
+          "id": 4,
+          "pathName": "pages/myself/myself"
         }
       ]
     }

@@ -1,14 +1,14 @@
 {
   "pages": [
-    "pages/BpChart/BpChart",
     "pages/wechatLogin/wechatLogin",
     "pages/index/index",
-    "pages/myself/myself",
-    "pages/functionTest/functionTest",
     "pages/BpRecord/BpRecord",
+    "pages/BpChart/BpChart",
     "pages/TreatmentPlan/TreatmentPlan",
     "pages/TreatmentPlanHistory/TreatmentPlanHistory",
-    "pages/PatientInfo/PatientInfo"
+    "pages/PatientInfo/PatientInfo",
+    "pages/myself/myself",
+    "pages/functionTest/functionTest"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -39,5 +39,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

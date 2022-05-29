@@ -52,11 +52,16 @@
   box-sizing: border-box;
 }
 .home .item {
-  width: 33.3%;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 20rpx;
+  box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.3);
   display: flex;
   box-sizing: border-box;
-  margin: 2rpx 0;
-  padding: 10rpx;
+  margin: 8rpx 0;
+  padding: 16rpx;
   align-items: center;
   text-align: center;
   line-height: 60rpx;
