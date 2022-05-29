@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports[Symbol.toStringTag] = "Module";
 var common_vendor = require("./common/vendor.js");
-require("./script/good_request.js");
+var common_js_request = require("./common/js/request.js");
 if (!Math) {
   "./pages/wechatLogin/wechatLogin.js";
   "./pages/index/index.js";
@@ -36,6 +36,8 @@ const _sfc_main = {
 var App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/App.vue"]]);
 function createApp() {
   const app = common_vendor.createSSRApp(App);
+  app.config.globalProperties.$http = common_js_request.http;
+  app.config.globalProperties.$hello = "Hello World";
   return {
     app
   };

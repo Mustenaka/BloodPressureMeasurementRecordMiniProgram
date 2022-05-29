@@ -4,16 +4,16 @@
 		<view class="header">
 			<swiper :indicator-dots="true" :autoplay="true" :interval="5000" :duration="1000">
 				<swiper-item v-for="(item, index) in swiperList" :key="index">
-					<image  class="swiper-image" :src="item" mode="aspectFill"></image>
+					<image class="swiper-image" :src="item" mode="aspectFill"></image>
 				</swiper-item>
 			</swiper>
 		</view>
-		
+
 		<view class="box">
 			<button class="button-style" type="primary" @click="login">微信登录</button>
 			<button class="button-style" type="primary" @click="register">微信注册</button>
 		</view>
-		
+
 		<!-- 尾部空白框，计划留作公司信息展示框 -->
 		<view class="box" style="margin-top: 30px;">
 			<text class="slogan">高血压健康记录小程序 - 守护您的健康</text>
@@ -82,7 +82,7 @@
 											// 存储token
 											var token = res3.data.data.token
 											uni.setStorageSync('token', token);
-
+											console.log('Token:' + token);
 											// 隐藏加载界面
 											uni.hideLoading();
 
@@ -95,10 +95,10 @@
 											});
 										} else if (res3.data.err_code == 40003) {
 											// 登陆失败，没有该用户 - 执行自动注册程序
-											
+
 											// 隐藏加载界面
 											uni.hideLoading();
-											
+
 											uni, uni.showToast({
 												title: "登陆失败-请先注册",
 												icon: 'none'
@@ -167,10 +167,10 @@
 										console.log("注册:" +
 											JSON.stringify(
 												res3.data));
-										
+
 										// 隐藏加载界面
 										uni.hideLoading();
-										
+
 										uni, uni.showToast({
 											title: "注册成功",
 											icon: 'none'
@@ -189,9 +189,9 @@
 					}
 				})
 			},
-		
+
 			// 测试方法
-			tester(){
+			tester() {
 				console.log("target tester!");
 			}
 		}
@@ -203,54 +203,59 @@
 		.swiper-image {
 			height: 250rpx;
 			width: 700rpx;
-			box-shadow: 1 1 10rpx rgba(0,0,0,1);
+			box-shadow: 1 1 10rpx rgba(0, 0, 0, 1);
 			border-radius: 25rpx;
 		}
-		.body{
+
+		.body {
 			padding: 0 30rpx;
 			background-color: #ECECEC;
 		}
-		.header{
+
+		.header {
 			background-color: #6FAD8F;
 			padding: 25rpx;
 			padding-bottom: 60rpx;
 		}
-		.box{
+
+		.box {
 			background-color: #fff;
 			border-radius: 25rpx;
-			
+
 			margin: 0 30rpx;
 			margin-top: -50rpx;
-			
+
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			
+
 			width: 700rpx;
-			padding:60rpx 25rpx ;
-			
+			padding: 60rpx 25rpx;
+
 			box-shadow: 9px 10px 16px rgba(0, 0, 0, 0.5);
-			box-sizing: border-box;		
+			box-sizing: border-box;
 		}
-		.item{
+
+		.item {
 			width: 33.3%;
-			
+
 			display: flex;
 			box-sizing: border-box;
 
 			margin: 2rpx 0;
 			padding: 10rpx;
-			
+
 			align-items: center;
 			text-align: center;
-			
+
 			line-height: 60rpx;
 			flex-direction: column;
-			font-weight: 550;	// 400 is normal 700 is bold
+			font-weight: 550; // 400 is normal 700 is bold
 			font-size: 80%;
-			
+
 		}
-		.slogan{
+
+		.slogan {
 			font-size: 9pt;
 		}
 	}

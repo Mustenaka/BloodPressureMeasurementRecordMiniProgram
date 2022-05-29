@@ -10,28 +10,27 @@
 			<!-- 中部选择框 -->
 			<view class="item">
 				<text>录入时间</text>
-				<uni-section :title="'日期时间用法：' + bpRecord.datetimesingle" type="line"></uni-section>
+				<uni-section :title="'日期时间：' + bpRecord.record_date_time" type="line"></uni-section>
 				<view class="example-body">
-					<uni-datetime-picker type="datetime" v-model="bpRecord.datetimesingle" />
+					<uni-datetime-picker type="datetime" v-model="bpRecord.record_date_time" />
 				</view>
 			</view>
 			<view class="item">
 				<text>血压-低压</text>
-				<uni-section :title="'使用v-model : '+ bpRecord.lowBP" subTitle="使用 v-model 显示默认值" type="line" padding>
-					<uni-number-box v-model="bpRecord.lowBP" />
+				<uni-section :title="'低压记录: '+ bpRecord.low" type="line" padding>
+					<uni-number-box v-model="bpRecord.low" :min="0" :max="500" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>血压-高压</text>
-				<uni-section :title="'使用v-model : '+ bpRecord.HighBP" subTitle="使用 v-model 显示默认值" type="line" padding>
-					<uni-number-box v-model="bpRecord.HighBP" />
+				<uni-section :title="'高压记录: '+ bpRecord.high" type="line" padding>
+					<uni-number-box v-model="bpRecord.high" :min="0" :max="500" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>心率</text>
-				<uni-section :title="'使用v-model : '+ bpRecord.heartRate" subTitle="使用 v-model 显示默认值" type="line"
-					padding>
-					<uni-number-box v-model="bpRecord.heartRate" />
+				<uni-section :title="'心率记录 : '+ bpRecord.heart_rate" type="line" padding>
+					<uni-number-box v-model="bpRecord.heart_rate" :min="0" :max="500" />
 				</uni-section>
 			</view>
 			<view class="item">
@@ -51,10 +50,10 @@
 		data() {
 			return {
 				bpRecord: {
-					datetimesingle: '',
-					lowBP: 60,
-					HighBP: 110,
-					heartRate: 70,
+					record_date_time: '',
+					low: 80,
+					high: 120,
+					heart_rate: 75,
 				}
 
 			};
@@ -62,14 +61,19 @@
 
 		methods: {
 			submit() {
-				this.$http.sendRequest('http://1.117.222.119/bprecord', 'POST', {
-					data: bpRecord,
+				console.log(this.$data.bpRecord.record_date_time);
+
+				this.$http.sendRequest('http://1.117.222.119/v1/user/bprecord', 'POST', {
+					"RecordDateTime": this.bpRecord.record_date_time,
+					"low": this.bpRecord.low,
+					"high": this.bpRecord.high,
+					"heart_rate": this.bpRecord.heart_rate,
 				}).then(res => {
 					//成功回调
 					console.log(res);
 				}).catch(err => {
 					//请求失败
-					console.log(res);
+					console.log(err);
 				})
 			}
 		}

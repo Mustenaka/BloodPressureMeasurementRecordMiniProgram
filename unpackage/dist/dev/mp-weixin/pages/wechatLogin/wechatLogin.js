@@ -42,6 +42,7 @@ const _sfc_main = {
                   if (res3.data.err_code == 0) {
                     var token = res3.data.data.token;
                     common_vendor.index.setStorageSync("token", token);
+                    console.log("Token:" + token);
                     common_vendor.index.hideLoading();
                     common_vendor.index.switchTab({
                       url: "/pages/index/index",
