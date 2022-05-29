@@ -4,7 +4,8 @@ const _sfc_main = {
   data() {
     return {
       swiperList: [
-        "../../static/swiper/swiper1.png"
+        "../../static/swiper/swiper1.png",
+        "../../static/swiper/swiper2.png"
       ]
     };
   },

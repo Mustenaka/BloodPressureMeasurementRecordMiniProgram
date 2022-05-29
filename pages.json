@@ -88,7 +88,8 @@
 			"path": "pages/PatientInfo/PatientInfo",
 			"style": {
 				"navigationBarTitleText": "患者信息",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"disableScroll": false
 			}
 		}, {
 			"path": "pages/myself-setting-push/myself-setting-push",

@@ -1,5 +1,4 @@
 {
-  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -13,46 +12,112 @@
     "miniprogram": {
       "list": [
         {
+          "id": 0,
+          "name": "注册登录页面",
+          "pathName": "pages/wechatLogin/wechatLogin",
+          "query": "id=80"
+        },
+        {
+          "id": 1,
+          "name": "测试页面",
+          "pathName": "pages/functionTest/functionTest",
+          "query": "id=90"
+        },
+        {
+          "id": 2,
+          "name": "主页（A面主页）",
+          "pathName": "pages/index/index",
+          "query": "id=100"
+        },
+        {
+          "id": 3,
+          "name": "血压记录",
+          "pathName": "pages/BpRecord/BpRecord",
+          "query": "id=101"
+        },
+        {
+          "id": 4,
+          "name": "血压记录表",
+          "pathName": "pages/BpChart/BpChart",
+          "query": "id=102"
+        },
+        {
+          "id": 5,
+          "name": "历史治疗方案",
+          "pathName": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+          "query": "id=103"
+        },
+        {
+          "id": 6,
+          "name": "治疗方案",
+          "pathName": "pages/TreatmentPlan/TreatmentPlan",
+          "query": "id=104"
+        },
+        {
           "id": 7,
+          "name": "我的检查报告",
+          "pathName": "pages/medicalReport/medicalReport",
+          "query": "id=110"
+        },
+        {
+          "id": 8,
+          "name": "检验报告-肌酐&BNP",
+          "pathName": "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
+          "query": "id=111"
+        },
+        {
+          "id": 9,
           "name": "检验报告-心电",
           "pathName": "pages/report-ECG/report-ECG",
           "query": "id=112"
         },
         {
-          "id": 8,
+          "id": 10,
           "name": "检验报告-血压报告",
           "pathName": "pages/report-BPWithHeart/report-BPWithHeart",
           "query": "id=113"
         },
         {
-          "id": 9,
+          "id": 11,
           "name": "拍照上传",
           "pathName": "pages/uploadPhoto/uploadPhoto",
           "query": "id=120"
         },
         {
-          "id": 10,
+          "id": 12,
           "name": "舌苔脉象",
           "pathName": "pages/TongueDetail/TongueDetail",
           "query": "id=121"
         },
         {
-          "id": 11,
+          "id": 13,
           "name": "我的(B面主页)",
           "pathName": "pages/myself/myself",
           "query": "id=200"
         },
         {
-          "id": 12,
-          "name": "患者信息",
-          "pathName": "pages/PatientInfo/PatientInfo",
+          "id": 14,
+          "name": "我的账户信息",
+          "pathName": "pages/myself-detail/myself-detail",
           "query": "id=201"
         },
         {
-          "id": 13,
+          "id": 15,
+          "name": "患者信息",
+          "pathName": "pages/PatientInfo/PatientInfo",
+          "query": "id=202"
+        },
+        {
+          "id": 16,
           "name": "推送设置",
           "pathName": "pages/myself-setting-push/myself-setting-push",
-          "query": "id=202"
+          "query": "id=203"
+        },
+        {
+          "name": "pages/PatientInfo/PatientInfo",
+          "pathName": "pages/PatientInfo/PatientInfo",
+          "query": "id=202",
+          "scene": null
         }
       ]
     }
