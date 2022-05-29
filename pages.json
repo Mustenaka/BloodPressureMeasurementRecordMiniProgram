@@ -1,13 +1,17 @@
 {
 	// 页面设置
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// 登陆页面
 		{
 			"path": "pages/wechatLogin/wechatLogin",
 			"style": {
 				"navigationBarTitleText": "微信登录",
 				"enablePullDownRefresh": false
 			}
-		}, {
+		},
+
+		// A面
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "血压健康记录小程序"
@@ -37,76 +41,71 @@
 				"enablePullDownRefresh": false
 			}
 		}, {
+			"path": "pages/medicalReport/medicalReport",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/uploadPhoto/uploadPhoto",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/TongueDetail/TongueDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/report-ECG/report-ECG",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/report-BPWithHeart/report-BPWithHeart",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+
+		// B面
+		{
+			"path": "pages/myself/myself",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}, {
 			"path": "pages/PatientInfo/PatientInfo",
 			"style": {
 				"navigationBarTitleText": "患者信息",
 				"enablePullDownRefresh": false
 			}
 		}, {
-			"path": "pages/myself/myself",
+			"path": "pages/myself-setting-push/myself-setting-push",
 			"style": {
-				"navigationBarTitleText": "我的"
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
 			}
-		}, { // 测试页面
+		},
+
+		// 测试页面
+		{
 			"path": "pages/functionTest/functionTest",
 			"style": {
 				"navigationBarTitleText": "功能测试页面"
 			}
-		},{
-            "path" : "pages/medicalReport/medicalReport",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/uploadPhoto/uploadPhoto",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/TongueDetail/TongueDetail",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/report-ECG/report-ECG",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/report-BPWithHeart/report-BPWithHeart",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+		}
+	],
 
 	// 全局配置
 	"globalStyle": {
