@@ -20,6 +20,9 @@
 			<view class="item">
 				<button type="primary" @click="submit">确认提交</button>
 			</view>
+			<!-- <view class="item">
+				<button type="primary" @click="toHistory">查看历史</button>
+			</view> -->
 		</view>
 
 		<!-- 尾部空白框，计划留作公司信息展示框 -->
@@ -46,6 +49,14 @@
 					title: `点击了${type==='prefix'?'左侧':'右侧'}的图标`,
 					icon: 'none'
 				})
+			},
+			toHistory(){
+				uni.navigateTo({
+					//保留当前页面，跳转到应用内的某个页面
+					url: '/pages/TreatmentPlanHistory/TreatmentPlanHistory',
+					animationType: "pop-in",
+					animationDuration: 200,
+				});
 			}
 		}
 	}

@@ -83,9 +83,9 @@
 			toTreatmentPlan(){
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '/pages/TreatmentPlan/TreatmentPlan',
-					animationType:"pop-in",
-					animationDuration:200,
+					url: '/pages/TreatmentPlanHistory/TreatmentPlanHistory',
+					animationType: "pop-in",
+					animationDuration: 200,
 				});
 			},
 		}

@@ -15,6 +15,13 @@ const _sfc_main = {
         title: `\u70B9\u51FB\u4E86${type === "prefix" ? "\u5DE6\u4FA7" : "\u53F3\u4FA7"}\u7684\u56FE\u6807`,
         icon: "none"
       });
+    },
+    submit() {
+      common_vendor.index.navigateTo({
+        url: "/pages/TreatmentPlan/TreatmentPlan",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
     }
   }
 };
@@ -43,7 +50,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "line",
       padding: true
     }),
-    d: common_vendor.o((...args) => _ctx.submit && _ctx.submit(...args))
+    d: common_vendor.o((...args) => $options.submit && $options.submit(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/TreatmentPlanHistory/TreatmentPlanHistory.vue"]]);

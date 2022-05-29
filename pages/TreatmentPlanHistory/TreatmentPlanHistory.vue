@@ -47,6 +47,14 @@
 					title: `点击了${type==='prefix'?'左侧':'右侧'}的图标`,
 					icon: 'none'
 				})
+			},
+			submit(){
+				uni.navigateTo({
+					//保留当前页面，跳转到应用内的某个页面
+					url: '/pages/TreatmentPlan/TreatmentPlan',
+					animationType: "pop-in",
+					animationDuration: 200,
+				});
 			}
 		}
 	}

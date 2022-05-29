@@ -17,23 +17,23 @@ const _sfc_main = {
         animationDuration: 200
       });
     },
-    toBpRecord() {
+    toMyselfDetail() {
       common_vendor.index.navigateTo({
-        url: "/pages/BpRecord/BpRecord",
+        url: "/pages/myself-detail/myself-detail",
         animationType: "pop-in",
         animationDuration: 200
       });
     },
-    toBpChart() {
+    toPatientInfo() {
       common_vendor.index.navigateTo({
-        url: "/pages/BpChart/BpChart",
+        url: "/pages/PatientInfo/PatientInfo",
         animationType: "pop-in",
         animationDuration: 200
       });
     },
-    toTreatmentPlan() {
+    toMyselfSettingPush() {
       common_vendor.index.navigateTo({
-        url: "/pages/TreatmentPlan/TreatmentPlan",
+        url: "/pages/myself-setting-push/myself-setting-push",
         animationType: "pop-in",
         animationDuration: 200
       });
@@ -48,9 +48,9 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         b: index
       };
     }),
-    b: common_vendor.o((...args) => $options.toBpRecord && $options.toBpRecord(...args)),
-    c: common_vendor.o((...args) => $options.toBpRecord && $options.toBpRecord(...args)),
-    d: common_vendor.o((...args) => $options.toBpRecord && $options.toBpRecord(...args))
+    b: common_vendor.o((...args) => $options.toMyselfDetail && $options.toMyselfDetail(...args)),
+    c: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
+    d: common_vendor.o((...args) => $options.toMyselfSettingPush && $options.toMyselfSettingPush(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/myself/myself.vue"]]);

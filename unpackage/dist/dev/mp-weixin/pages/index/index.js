@@ -33,7 +33,7 @@ const _sfc_main = {
     },
     toTreatmentPlan() {
       common_vendor.index.navigateTo({
-        url: "/pages/TreatmentPlan/TreatmentPlan",
+        url: "/pages/TreatmentPlanHistory/TreatmentPlanHistory",
         animationType: "pop-in",
         animationDuration: 200
       });

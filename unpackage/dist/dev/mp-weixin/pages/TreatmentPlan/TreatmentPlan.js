@@ -15,6 +15,13 @@ const _sfc_main = {
         title: `\u70B9\u51FB\u4E86${type === "prefix" ? "\u5DE6\u4FA7" : "\u53F3\u4FA7"}\u7684\u56FE\u6807`,
         icon: "none"
       });
+    },
+    toHistory() {
+      common_vendor.index.navigateTo({
+        url: "/pages/TreatmentPlanHistory/TreatmentPlanHistory",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
     }
   }
 };
