@@ -9,8 +9,15 @@ if (!Math) {
   "./pages/BpChart/BpChart.js";
   "./pages/TreatmentPlan/TreatmentPlan.js";
   "./pages/TreatmentPlanHistory/TreatmentPlanHistory.js";
-  "./pages/PatientInfo/PatientInfo.js";
+  "./pages/medicalReport/medicalReport.js";
+  "./pages/uploadPhoto/uploadPhoto.js";
+  "./pages/TongueDetail/TongueDetail.js";
+  "./pages/report-CreatinineWithBnp/report-CreatinineWithBnp.js";
+  "./pages/report-ECG/report-ECG.js";
+  "./pages/report-BPWithHeart/report-BPWithHeart.js";
   "./pages/myself/myself.js";
+  "./pages/PatientInfo/PatientInfo.js";
+  "./pages/myself-setting-push/myself-setting-push.js";
   "./pages/functionTest/functionTest.js";
 }
 const _sfc_main = {

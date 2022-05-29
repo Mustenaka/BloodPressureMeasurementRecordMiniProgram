@@ -1,0 +1,78 @@
+
+.container.data-v-e4e769ee {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.container.loading1.data-v-e4e769ee {
+  transform: rotate(45deg);
+}
+.container .shape.data-v-e4e769ee {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+}
+.container .shape.shape1.data-v-e4e769ee {
+  left: 0;
+  background-color: #1890FF;
+}
+.container .shape.shape2.data-v-e4e769ee {
+  right: 0;
+  background-color: #91CB74;
+}
+.container .shape.shape3.data-v-e4e769ee {
+  bottom: 0;
+  background-color: #FAC858;
+}
+.container .shape.shape4.data-v-e4e769ee {
+  bottom: 0;
+  right: 0;
+  background-color: #EE6666;
+}
+.loading1 .shape1.data-v-e4e769ee {
+  animation: animation1shape1-e4e769ee 0.5s ease 0s infinite alternate;
+}
+@keyframes animation1shape1-e4e769ee {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(16px, 16px);
+}
+}
+.loading1 .shape2.data-v-e4e769ee {
+  animation: animation1shape2-e4e769ee 0.5s ease 0s infinite alternate;
+}
+@keyframes animation1shape2-e4e769ee {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(-16px, 16px);
+}
+}
+.loading1 .shape3.data-v-e4e769ee {
+  animation: animation1shape3-e4e769ee 0.5s ease 0s infinite alternate;
+}
+@keyframes animation1shape3-e4e769ee {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(16px, -16px);
+}
+}
+.loading1 .shape4.data-v-e4e769ee {
+  animation: animation1shape4-e4e769ee 0.5s ease 0s infinite alternate;
+}
+@keyframes animation1shape4-e4e769ee {
+from {
+    transform: translate(0, 0);
+}
+to {
+    transform: translate(-16px, -16px);
+}
+}
+
+

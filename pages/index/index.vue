@@ -51,6 +51,7 @@
 				// 轮播图列表
 				swiperList: [
 					'../../static/swiper/swiper1.png',
+					'../../static/swiper/swiper2.png',
 				],
 			}
 		},
