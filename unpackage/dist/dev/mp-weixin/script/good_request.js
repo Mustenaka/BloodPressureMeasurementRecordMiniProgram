@@ -1,6 +1,6 @@
 "use strict";
 var common_vendor = require("../common/vendor.js");
-var apiUrl = "http://1.117.222.119";
+const redirectPages = "/pages/wechatLogin/wechatLogin";
 const sendRequest = (url, method = "GET", data = {}, contentType) => {
   let types = "";
   if (method == "POST" && !contentType) {
@@ -10,7 +10,6 @@ const sendRequest = (url, method = "GET", data = {}, contentType) => {
   } else {
     types = "application/json";
   }
-  var bases = apiUrl + "/" + url;
   var token = common_vendor.index.getStorageSync("token") || "";
   return new Promise(function(resolve, reject) {
     common_vendor.index.request({
@@ -35,7 +34,7 @@ const sendRequest = (url, method = "GET", data = {}, contentType) => {
               success: (ress) => {
                 if (ress.confirm) {
                   common_vendor.index.redirectTo({
-                    url: "/pages/wechatLogin/wechatLogin"
+                    url: redirectPages
                   });
                 }
               }

@@ -10,27 +10,28 @@
 			<!-- 中部选择框 -->
 			<view class="item">
 				<text>录入时间</text>
-				<uni-section :title="'日期时间用法：' + datetimesingle" type="line"></uni-section>
+				<uni-section :title="'日期时间用法：' + bpRecord.datetimesingle" type="line"></uni-section>
 				<view class="example-body">
-					<uni-datetime-picker type="datetime" v-model="datetimesingle" @change="changeLog" />
+					<uni-datetime-picker type="datetime" v-model="bpRecord.datetimesingle" />
 				</view>
 			</view>
 			<view class="item">
 				<text>血压-低压</text>
-				<uni-section :title="'使用v-model : '+ lowBP" subTitle="使用 v-model 显示默认值" type="line" padding>
-					<uni-number-box v-model="lowBP" @blur="blur" @focus="focus" @change="changeValue" />
+				<uni-section :title="'使用v-model : '+ bpRecord.lowBP" subTitle="使用 v-model 显示默认值" type="line" padding>
+					<uni-number-box v-model="bpRecord.lowBP" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>血压-高压</text>
-				<uni-section :title="'使用v-model : '+ HighBP" subTitle="使用 v-model 显示默认值" type="line" padding>
-					<uni-number-box v-model="HighBP" @blur="blur" @focus="focus" @change="changeValue" />
+				<uni-section :title="'使用v-model : '+ bpRecord.HighBP" subTitle="使用 v-model 显示默认值" type="line" padding>
+					<uni-number-box v-model="bpRecord.HighBP" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>心率</text>
-				<uni-section :title="'使用v-model : '+ heartRate" subTitle="使用 v-model 显示默认值" type="line" padding>
-					<uni-number-box v-model="heartRate" @blur="blur" @focus="focus" @change="changeValue" />
+				<uni-section :title="'使用v-model : '+ bpRecord.heartRate" subTitle="使用 v-model 显示默认值" type="line"
+					padding>
+					<uni-number-box v-model="bpRecord.heartRate" />
 				</uni-section>
 			</view>
 			<view class="item">
@@ -49,19 +50,27 @@
 	export default {
 		data() {
 			return {
-				datetimesingle: '',
-				lowBP: 60,
-				HighBP: 110,
-				heartRate: 70,
+				bpRecord: {
+					datetimesingle: '',
+					lowBP: 60,
+					HighBP: 110,
+					heartRate: 70,
+				}
+
 			};
 		},
 
 		methods: {
-			changeLog(e) {
-				console.log('change事件:', e);
-			},
-			submit(){
-				console.log("target submit")
+			submit() {
+				this.$http.sendRequest('http://1.117.222.119/bprecord', 'POST', {
+					data: bpRecord,
+				}).then(res => {
+					//成功回调
+					console.log(res);
+				}).catch(err => {
+					//请求失败
+					console.log(res);
+				})
 			}
 		}
 	}
@@ -129,9 +138,9 @@
 			align-items: center;
 			text-align: left;
 			justify-content: space-between;
-				
+
 			flex-direction: row;
-			
+
 			font-weight: 550;
 			font-size: 80%;
 
