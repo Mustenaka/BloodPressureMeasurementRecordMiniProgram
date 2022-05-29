@@ -1,1 +1,0 @@
-<view><loading1 wx:if="{{a}}" u-i="6d40448e-0" bind:__l="__l"/><loading2 wx:if="{{b}}" u-i="6d40448e-1" bind:__l="__l"/><loading3 wx:if="{{c}}" u-i="6d40448e-2" bind:__l="__l"/><loading4 wx:if="{{d}}" u-i="6d40448e-3" bind:__l="__l"/><loading5 wx:if="{{e}}" u-i="6d40448e-4" bind:__l="__l"/></view>
