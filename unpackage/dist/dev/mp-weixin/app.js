@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports[Symbol.toStringTag] = "Module";
 var common_vendor = require("./common/vendor.js");
+require("./script/good_request.js");
 if (!Math) {
   "./pages/wechatLogin/wechatLogin.js";
   "./pages/index/index.js";

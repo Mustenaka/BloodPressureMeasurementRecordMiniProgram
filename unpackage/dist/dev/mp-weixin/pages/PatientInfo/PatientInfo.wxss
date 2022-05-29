@@ -24,7 +24,7 @@
 /* 透明度 */
 /* 文章场景相关 */
 .home {
-  height: 2100rpx;
+  height: 2200rpx;
 }
 .home .header {
   background-color: #6FAD8F;
@@ -54,7 +54,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 700rpx;
-  height: 1900rpx;
+  height: 2000rpx;
   padding: 60rpx 25rpx;
   box-shadow: 9px 10px 16px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;

@@ -1,4 +1,6 @@
 import App from './App'
+
+import http from './script/good_request.js'
 // main.js
 
 // #ifndef VUE3
