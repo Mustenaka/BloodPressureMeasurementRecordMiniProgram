@@ -1,0 +1,60 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 7,
+          "name": "检验报告-心电",
+          "pathName": "pages/report-ECG/report-ECG",
+          "query": "id=112"
+        },
+        {
+          "id": 8,
+          "name": "检验报告-血压报告",
+          "pathName": "pages/report-BPWithHeart/report-BPWithHeart",
+          "query": "id=113"
+        },
+        {
+          "id": 9,
+          "name": "拍照上传",
+          "pathName": "pages/uploadPhoto/uploadPhoto",
+          "query": "id=120"
+        },
+        {
+          "id": 10,
+          "name": "舌苔脉象",
+          "pathName": "pages/TongueDetail/TongueDetail",
+          "query": "id=121"
+        },
+        {
+          "id": 11,
+          "name": "我的(B面主页)",
+          "pathName": "pages/myself/myself",
+          "query": "id=200"
+        },
+        {
+          "id": 12,
+          "name": "患者信息",
+          "pathName": "pages/PatientInfo/PatientInfo",
+          "query": "id=201"
+        },
+        {
+          "id": 13,
+          "name": "推送设置",
+          "pathName": "pages/myself-setting-push/myself-setting-push",
+          "query": "id=202"
+        }
+      ]
+    }
+  }
+}

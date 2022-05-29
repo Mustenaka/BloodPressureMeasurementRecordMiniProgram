@@ -105,7 +105,16 @@
 				"navigationBarTitleText": "功能测试页面"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/myself-detail/myself-detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 
 	// 全局配置
 	"globalStyle": {
@@ -145,6 +154,18 @@
 	"condition": {
 		"current": 0,
 		"list": [
+			// 注册登录页面
+			{
+				"name": "注册登录页面",
+				"path": "pages/wechatLogin/wechatLogin",
+				"query": "id=80"
+			},
+			// 测试页面
+			{
+				"name": "测试页面",
+				"path": "pages/functionTest/functionTest",
+				"query": "id=90"
+			},
 			// A面
 			{
 				"name": "主页（A面主页）",
@@ -197,13 +218,17 @@
 				"path": "pages/myself/myself",
 				"query": "id=200"
 			}, {
+				"name": "我的账户信息",
+				"path": "pages/myself-detail/myself-detail",
+				"query": "id=201"
+			}, {
 				"name": "患者信息",
 				"path": "pages/PatientInfo/PatientInfo",
-				"query": "id=201"
+				"query": "id=202"
 			}, {
 				"name": "推送设置",
 				"path": "pages/myself-setting-push/myself-setting-push",
-				"query": "id=202"
+				"query": "id=203"
 			}
 		]
 	}

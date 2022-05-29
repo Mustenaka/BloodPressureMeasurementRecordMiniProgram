@@ -19,6 +19,7 @@ if (!Math) {
   "./pages/PatientInfo/PatientInfo.js";
   "./pages/myself-setting-push/myself-setting-push.js";
   "./pages/functionTest/functionTest.js";
+  "./pages/myself-detail/myself-detail.js";
 }
 const _sfc_main = {
   onLaunch: function() {
