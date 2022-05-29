@@ -28,8 +28,6 @@ const _sfc_main = {
         },
         yAxis: {
           disabled: false,
-          min: 0,
-          max: 200,
           splitNumber: 1,
           gridType: "dash",
           dashLength: 2,
@@ -64,36 +62,59 @@ const _sfc_main = {
             width: 2
           }
         }
-      }
+      },
+      daysCount: 60,
+      limit_days: 1
     };
   },
   onReady() {
-    this.getServerData();
+    this.submit();
   },
   methods: {
-    changeLog(e) {
-      console.log("change\u4E8B\u4EF6:", e);
+    submit7days() {
+      this.limit_days = 7;
+      this.submit();
+    },
+    submit30days() {
+      this.limit_days = 30;
+      this.submit();
+    },
+    submitCustomizedays() {
+      this.limit_days = this.daysCount;
+      this.submit();
     },
     submit() {
-      console.log("target submit");
-    },
-    getServerData() {
-      setTimeout(() => {
-        let res = {
-          categories: ["13", "14", "15", "16", "17", "18"],
-          series: [
-            {
-              name: "\u4F4E\u538B",
-              data: [65, 35, 81, 75, 73, 72]
-            },
-            {
-              name: "\u9AD8\u538B",
-              data: [110, 145, 155, 121, 122, 112]
-            }
-          ]
+      const url = "http://1.117.222.119/v1/user/bprecord?limit_days=" + this.limit_days;
+      console.log(this.limit_days);
+      this.$http.sendRequest(url, "GET", {}).then((res) => {
+        console.log(res);
+        var categories = [];
+        var series = [
+          {
+            name: "\u4F4E\u538B",
+            data: []
+          },
+          {
+            name: "\u9AD8\u538B",
+            data: []
+          }
+        ];
+        for (var item of res.data.data) {
+          var date = item.record_date.split("T")[0];
+          var simpledate = date.split("-")[1] + "-" + date.split("-")[2];
+          var datetime = simpledate + " " + item.record_time;
+          categories.push(datetime);
+          series[0].data.push(item.low_pressure);
+          series[1].data.push(item.high_pressure);
+        }
+        var res2 = {
+          categories,
+          series
         };
-        this.chartData = JSON.parse(JSON.stringify(res));
-      }, 500);
+        this.chartData = JSON.parse(JSON.stringify(res2));
+      }).catch((err) => {
+        console.log(err);
+      });
     }
   }
 };
@@ -116,19 +137,17 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       chartData: $data.chartData,
       ontouch: true
     }),
-    b: common_vendor.o((...args) => $options.submit && $options.submit(...args)),
-    c: common_vendor.o((...args) => $options.submit && $options.submit(...args)),
-    d: common_vendor.o((...args) => $options.submit && $options.submit(...args)),
-    e: common_vendor.o(_ctx.blur),
-    f: common_vendor.o(_ctx.focus),
-    g: common_vendor.o(_ctx.changeValue),
-    h: common_vendor.o(($event) => _ctx.heartRate = $event),
-    i: common_vendor.p({
-      modelValue: _ctx.heartRate
+    b: common_vendor.o((...args) => $options.submit7days && $options.submit7days(...args)),
+    c: common_vendor.o((...args) => $options.submit30days && $options.submit30days(...args)),
+    d: common_vendor.o((...args) => $options.submitCustomizedays && $options.submitCustomizedays(...args)),
+    e: common_vendor.o(($event) => $data.daysCount = $event),
+    f: common_vendor.p({
+      min: 0,
+      max: 360,
+      modelValue: $data.daysCount
     }),
-    j: common_vendor.p({
-      title: "\u4F7F\u7528v-model : " + _ctx.heartRate,
-      subTitle: "\u4F7F\u7528 v-model \u663E\u793A\u9ED8\u8BA4\u503C",
+    g: common_vendor.p({
+      title: "\u81EA\u5B9A\u4E49\u5929\u6570: " + $data.daysCount,
       type: "line",
       padding: true
     })

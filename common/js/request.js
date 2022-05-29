@@ -1,3 +1,5 @@
+// import { type } from "os";
+
 // 重定向页面，这里应该采用用于登录的页面
 const redirectPages = '/pages/wechatLogin/wechatLogin'
 
@@ -11,7 +13,7 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 	// 	types = contentType
 	// } else {
 	// 	types = 'application/json';
-	// }
+	// 
 
 	var token = "Bearer " + uni.getStorageSync('token') || '';
 	console.log('get Token:' + token);
@@ -27,6 +29,7 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 				'Accept': '*/*',
 				'Authorization': token
 			},
+			
 			success(res) {
 				if (res.header.authorization || res.header.Authorization) {
 					uni.setStorageSync('token', res.header.authorization || res.header

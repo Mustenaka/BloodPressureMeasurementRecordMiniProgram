@@ -21,8 +21,16 @@ const _sfc_main = {
         "heart_rate": this.bpRecord.heart_rate
       }).then((res) => {
         console.log(res);
+        common_vendor.index.showToast({
+          title: "\u5F55\u5165\u6210\u529F",
+          icon: "none"
+        });
       }).catch((err) => {
         console.log(err);
+        common_vendor.index.showToast({
+          title: "\u8BF7\u6C42\u5931\u8D25",
+          icon: "none"
+        });
       });
     }
   }

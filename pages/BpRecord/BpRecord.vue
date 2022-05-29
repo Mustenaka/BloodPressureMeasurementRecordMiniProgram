@@ -71,9 +71,17 @@
 				}).then(res => {
 					//成功回调
 					console.log(res);
+					uni, uni.showToast({
+						title: "录入成功",
+						icon: 'none'
+					})
 				}).catch(err => {
 					//请求失败
 					console.log(err);
+					uni, uni.showToast({
+						title: "请求失败",
+						icon: 'none'
+					})
 				})
 			}
 		}
