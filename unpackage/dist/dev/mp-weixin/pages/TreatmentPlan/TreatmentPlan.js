@@ -7,13 +7,23 @@ const _sfc_main = {
     };
   },
   methods: {
-    input(e) {
-      console.log("\u8F93\u5165\u5185\u5BB9\uFF1A", e);
-    },
-    iconClick(type) {
-      common_vendor.index.showToast({
-        title: `\u70B9\u51FB\u4E86${type === "prefix" ? "\u5DE6\u4FA7" : "\u53F3\u4FA7"}\u7684\u56FE\u6807`,
-        icon: "none"
+    submit() {
+      this.$http.sendRequest("http://1.117.222.119/v1/user/treatmentplan", "POST", {
+        "plan": this.value,
+        "note": "\u65E0"
+      }).then((res) => {
+        console.log(res);
+        common_vendor.index.showToast({
+          title: "\u5F55\u5165\u6210\u529F",
+          icon: "none"
+        });
+        this.toHistory();
+      }).catch((err) => {
+        console.log(err);
+        common_vendor.index.showToast({
+          title: "\u8BF7\u6C42\u5931\u8D25",
+          icon: "none"
+        });
       });
     },
     toHistory() {
@@ -44,12 +54,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       modelValue: $data.value
     }),
     c: common_vendor.p({
-      title: "\u591A\u884C\u6587\u672C\u81EA\u52A8\u9AD8\u5EA6",
-      subTitle: "\u4F7F\u7528\u5C5E\u6027 autoHeight \u4F7F\u591A\u884C\u6587\u672C\u6846\u81EA\u52A8\u589E\u9AD8",
+      title: "\u521B\u5EFA\u65B0\u7684\u6CBB\u7597\u65B9\u6848",
       type: "line",
       padding: true
     }),
-    d: common_vendor.o((...args) => _ctx.submit && _ctx.submit(...args))
+    d: common_vendor.o((...args) => $options.submit && $options.submit(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/TreatmentPlan/TreatmentPlan.vue"]]);

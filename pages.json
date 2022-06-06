@@ -38,7 +38,8 @@
 			"path": "pages/TreatmentPlanHistory/TreatmentPlanHistory",
 			"style": {
 				"navigationBarTitleText": "历史治疗方案",
-				"enablePullDownRefresh": false
+				"enablePullDownRefresh": false,
+				"disableScroll": false
 			}
 		}, {
 			"path": "pages/medicalReport/medicalReport",

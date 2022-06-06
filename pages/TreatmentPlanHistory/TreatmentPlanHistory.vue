@@ -5,16 +5,14 @@
 			<text class="header-text">历史治疗方案</text>
 		</view>
 
-		<!-- 中部选择框 -->
 		<view class="box">
 			<!-- 中部选择框 -->
-			<view class="item">
-				<text>我的治疗方案</text>
-				<text>2022/05/24</text>
-			</view>
-			<view class="item">
-				<uni-section title="多行文本自动高度" subTitle="使用属性 autoHeight 使多行文本框自动增高" type="line" padding>
-					<uni-easyinput disabled type="textarea" autoHeight v-model="value" placeholder="请输入内容"></uni-easyinput>
+			<view class="item" v-for="(item,index) in TreatmentArray">
+				<text>我的治疗方案 {{index+1}} - </text>
+				<text>{{item.date}}</text>
+				<uni-section title="我的历史治疗方案" type="line" padding>
+					<uni-easyinput disabled type="textarea" autoHeight v-model="item.value" placeholder="请输入内容">
+					</uni-easyinput>
 				</uni-section>
 			</view>
 
@@ -22,11 +20,7 @@
 				<button type="primary" @click="submit">新增治疗方案</button>
 			</view>
 		</view>
-
-		<!-- 尾部空白框，计划留作公司信息展示框 -->
-		<view class="box" style="margin-top: 30px;">
-			<text class="slogan">高血压健康记录小程序 - 守护您的健康</text>
-		</view>
+		
 	</view>
 </template>
 
@@ -34,21 +28,48 @@
 	export default {
 		data() {
 			return {
-				value: '适合治疗高血压的方剂有很多，例如常用的有天麻钩藤饮，擅治肝阳上亢型高血压，还有镇肝熄风汤、羚角钩藤汤，擅治肝阳上亢、阳化风动型高血压。龙胆泻肝汤擅于治疗肝阳化火型高血压，半夏白术天麻汤擅于治疗痰浊中阻型高血压，血府逐瘀汤适合治疗瘀血阻滞导致的高血压。\r\n如果高血压是血虚火盛而导致，适合选用芎归芍药汤进行治疗，知柏地黄丸擅于治疗肾阴亏虚、虚火上扰所致的高血压，以上仅是临床个人常用的治疗高血压的方剂。',
+				TreatmentArray: []
 			};
 		},
 
+		onLoad() {
+			this.getData();
+		},
+
 		methods: {
-			input(e) {
-				console.log('输入内容：', e);
+			getData() {
+				const url = 'http://1.117.222.119/v1/user/treatmentplan?limit_count=0'
+				this.$http.sendRequest(url, 'GET', {})
+					.then(
+						res => {
+							//成功回调
+							console.log(res);
+
+							// 循环遍历拿数据
+							for (var item of res.data.data) {
+								var create_time = item.create_datetime.slice(0, 10) + " " +
+									item.create_datetime.slice(11, 16);
+								var detail = {
+									date: create_time,
+									value: item.plan,
+								}
+
+								this.TreatmentArray.push(detail);
+							}
+
+							var res2 = {
+								categories: categories,
+								series: series
+							}
+
+							this.chartData = JSON.parse(JSON.stringify(res2));
+						}).catch(err => {
+						//请求失败
+						console.log(err);
+					})
 			},
-			iconClick(type) {
-				uni.showToast({
-					title: `点击了${type==='prefix'?'左侧':'右侧'}的图标`,
-					icon: 'none'
-				})
-			},
-			submit(){
+
+			submit() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
 					url: '/pages/TreatmentPlan/TreatmentPlan',
@@ -101,7 +122,7 @@
 			justify-content: center;
 
 			width: 700rpx;
-			height: 85vh;
+			// height: 85vh;
 			padding: 60rpx 25rpx;
 
 			box-shadow: 9px 10px 16px rgba(0, 0, 0, 0.5);

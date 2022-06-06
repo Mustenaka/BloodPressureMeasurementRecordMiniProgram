@@ -52,7 +52,6 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 700rpx;
-  height: 85vh;
   padding: 60rpx 25rpx;
   box-shadow: 9px 10px 16px rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
