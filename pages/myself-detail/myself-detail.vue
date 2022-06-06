@@ -2,36 +2,47 @@
 	<view class="home">
 		<!-- 首部轮播图 -->
 		<view class="header">
-			<text class="header-text">血压录入</text>
+			<text class="header-text">我的微信账户信息</text>
 		</view>
 
 		<!-- 中部选择框 -->
 		<view class="box">
 			<!-- 中部选择框 -->
 			<view class="item">
+				<image class="logo" :src='Avatar_Url'></image>
+			</view>
+
+			<view class="item">
 				<text>用户名</text>
-				<uni-section title="默认" subTitle="使用 focus 属性自动获取输入框焦点" type="line" padding>
+				<uni-section title="默认" type="line" padding>
 					<uni-easyinput errorMessage v-model="userName" focus placeholder="请输入内容" @input="input">
 					</uni-easyinput>
 				</uni-section>
 			</view>
 			<view class="item">
+				<text>真实姓名</text>
+				<uni-section title="默认" type="line" padding>
+					<uni-easyinput errorMessage v-model="RealName" focus placeholder="请输入内容" @input="input">
+					</uni-easyinput>
+				</uni-section>
+			</view>
+			<view class="item">
 				<text>电话</text>
-				<uni-section title="默认" subTitle="使用 focus 属性自动获取输入框焦点" type="line" padding>
+				<uni-section title="默认" type="line" padding>
 					<uni-easyinput errorMessage v-model="Tellphone" focus placeholder="请输入内容" @input="input">
 					</uni-easyinput>
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>邮箱</text>
-				<uni-section title="默认" subTitle="使用 focus 属性自动获取输入框焦点" type="line" padding>
+				<uni-section title="默认" type="line" padding>
 					<uni-easyinput errorMessage v-model="Email" focus placeholder="请输入内容" @input="input">
 					</uni-easyinput>
 				</uni-section>
 			</view>
 
 			<view class="item">
-				<button type="primary" @click="submit">确认提交</button>
+				<button type="primary" @click="submit">修改</button>
 			</view>
 		</view>
 
@@ -46,29 +57,58 @@
 	export default {
 		data() {
 			return {
-				userName: "Andrew",
-				Tellphone: "18222221111",
-				Email: "Cuwa@outlook.com",
+				RealName: '',
+				userName: "龙医护心",
+				Tellphone: "-",
+				Email: "-",
+				Avatar_Url: "/static/project-logo.png",
 			};
 		},
 
-		methods: {
-			submit() {
-				console.log(this.$data.bpRecord.record_date_time);
+		onLoad() {
+			this.getData();
+		},
 
-				this.$http.sendRequest('http://1.117.222.119/v1/user/bprecord', 'POST', {
-					"RecordDateTime": this.bpRecord.record_date_time,
-					"low": this.bpRecord.low,
-					"high": this.bpRecord.high,
-					"heart_rate": this.bpRecord.heart_rate,
-				}).then(res => {
-					//成功回调
-					console.log(res);
-					uni, uni.showToast({
-						title: "录入成功",
-						icon: 'none'
-					})
-				}).catch(err => {
+		methods: {
+			getData() {
+				const url = 'http://1.117.222.119/v1/user';
+				this.$http.sendRequest(url, 'GET', {}).then(
+					res => {
+						//成功回调
+						console.log(res);
+
+						var data = res.data.data;
+						this.userName = data.user_name;
+						this.RealName = data.real_name;
+						this.Tellphone = data.tel;
+						this.Email = data.email;
+						this.Avatar_Url = data.avatarUrl;
+					}).catch(err => {
+					//请求失败
+					console.log(err);
+				})
+			},
+
+			// 提交更新
+			submit() {
+				const url = 'http://1.117.222.119/v1/user/user';
+				this.$http.sendRequest(url, 'PUT', {
+					"username": this.userName,
+					"realname": this.RealName,
+					"telephone": this.Tellphone,
+					"email": this.Email,
+					"avatarUrl": this.Avatar_Url
+				}).then(
+					res => {
+						//成功回调
+						console.log(res);
+
+						// 录入成功
+						uni, uni.showToast({
+							title: "修改成功",
+							icon: 'none'
+						})
+					}).catch(err => {
 					//请求失败
 					console.log(err);
 					uni, uni.showToast({
@@ -76,7 +116,7 @@
 						icon: 'none'
 					})
 				})
-			}
+			},
 		}
 	}
 </script>
@@ -91,6 +131,15 @@
 
 			height: 250rpx;
 			width: 700rpx;
+		}
+
+		.logo {
+			height: 200rpx;
+			width: 200rpx;
+			margin-top: -20rpx;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 50rpx;
 		}
 
 		.header-text {
