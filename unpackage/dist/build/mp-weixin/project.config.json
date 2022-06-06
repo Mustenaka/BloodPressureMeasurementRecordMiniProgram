@@ -1,0 +1,134 @@
+{
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wxa2164c390f287f1c",
+  "projectname": "BloodPressureMeasurementRecordMiniProgram",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "name": "注册登录页面",
+          "query": "id=80",
+          "id": 0,
+          "pathName": "pages/wechatLogin/wechatLogin"
+        },
+        {
+          "name": "测试页面",
+          "query": "id=90",
+          "id": 1,
+          "pathName": "pages/functionTest/functionTest"
+        },
+        {
+          "name": "主页（A面主页）",
+          "query": "id=100",
+          "id": 2,
+          "pathName": "pages/index/index"
+        },
+        {
+          "name": "血压记录",
+          "query": "id=101",
+          "id": 3,
+          "pathName": "pages/BpRecord/BpRecord"
+        },
+        {
+          "name": "血压记录表",
+          "query": "id=102",
+          "id": 4,
+          "pathName": "pages/BpChart/BpChart"
+        },
+        {
+          "name": "历史治疗方案",
+          "query": "id=103",
+          "id": 5,
+          "pathName": "pages/TreatmentPlanHistory/TreatmentPlanHistory"
+        },
+        {
+          "name": "治疗方案",
+          "query": "id=104",
+          "id": 6,
+          "pathName": "pages/TreatmentPlan/TreatmentPlan"
+        },
+        {
+          "name": "我的检查报告",
+          "query": "id=110",
+          "id": 7,
+          "pathName": "pages/medicalReport/medicalReport"
+        },
+        {
+          "name": "检验报告-肌酐&BNP",
+          "query": "id=111",
+          "id": 8,
+          "pathName": "pages/report-CreatinineWithBnp/report-CreatinineWithBnp"
+        },
+        {
+          "name": "检验报告-心电",
+          "query": "id=112",
+          "id": 9,
+          "pathName": "pages/report-ECG/report-ECG"
+        },
+        {
+          "name": "检验报告-血压报告",
+          "query": "id=113",
+          "id": 10,
+          "pathName": "pages/report-BPWithHeart/report-BPWithHeart"
+        },
+        {
+          "name": "拍照上传",
+          "query": "id=120",
+          "id": 11,
+          "pathName": "pages/uploadPhoto/uploadPhoto"
+        },
+        {
+          "name": "舌苔脉象",
+          "query": "id=121",
+          "id": 12,
+          "pathName": "pages/TongueDetail/TongueDetail"
+        },
+        {
+          "name": "我的(B面主页)",
+          "query": "id=200",
+          "id": 13,
+          "pathName": "pages/myself/myself"
+        },
+        {
+          "name": "我的账户信息",
+          "query": "id=201",
+          "id": 14,
+          "pathName": "pages/myself-detail/myself-detail"
+        },
+        {
+          "name": "患者信息",
+          "query": "id=202",
+          "id": 15,
+          "pathName": "pages/PatientInfo/PatientInfo"
+        },
+        {
+          "name": "推送设置",
+          "query": "id=203",
+          "id": 16,
+          "pathName": "pages/myself-setting-push/myself-setting-push"
+        }
+      ]
+    }
+  }
+}

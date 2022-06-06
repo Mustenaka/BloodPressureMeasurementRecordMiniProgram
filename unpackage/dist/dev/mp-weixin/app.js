@@ -10,7 +10,7 @@ if (!Math) {
   "./pages/BpChart/BpChart.js";
   "./pages/TreatmentPlan/TreatmentPlan.js";
   "./pages/TreatmentPlanHistory/TreatmentPlanHistory.js";
-  "./pages/medicalReport/medicalReport.js";
+  "./pages/MyMedicalReport/MyMedicalReport.js";
   "./pages/uploadPhoto/uploadPhoto.js";
   "./pages/TongueDetail/TongueDetail.js";
   "./pages/report-CreatinineWithBnp/report-CreatinineWithBnp.js";

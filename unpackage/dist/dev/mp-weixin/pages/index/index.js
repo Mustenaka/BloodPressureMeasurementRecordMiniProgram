@@ -37,6 +37,27 @@ const _sfc_main = {
         animationType: "pop-in",
         animationDuration: 200
       });
+    },
+    toMyMedicalReport() {
+      common_vendor.index.navigateTo({
+        url: "/pages/MyMedicalReport/MyMedicalReport",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
+    },
+    toUploadPhoto() {
+      common_vendor.index.navigateTo({
+        url: "/pages/uploadPhoto/uploadPhoto",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
+    },
+    toTongueDetail() {
+      common_vendor.index.navigateTo({
+        url: "/pages/TongueDetail/TongueDetail",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
     }
   }
 };
@@ -74,19 +95,19 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "icon-bpr-wechatjiankangfangan",
       size: "30"
     }),
-    h: common_vendor.o($options.toTestPage),
+    h: common_vendor.o($options.toMyMedicalReport),
     i: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatbaogao-copy",
       size: "30"
     }),
-    j: common_vendor.o($options.toTestPage),
+    j: common_vendor.o($options.toUploadPhoto),
     k: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechatpaizhao",
       size: "30"
     }),
-    l: common_vendor.o($options.toTestPage),
+    l: common_vendor.o($options.toTongueDetail),
     m: common_vendor.p({
       customPrefix: "iconfont",
       type: "icon-bpr-wechattongue",

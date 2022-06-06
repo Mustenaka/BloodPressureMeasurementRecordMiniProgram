@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "血压录入",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "uni-datetime-picker": "../../uni_modules/uni-datetime-picker/components/uni-datetime-picker/uni-datetime-picker",
+    "uni-number-box": "../../uni_modules/uni-number-box/components/uni-number-box/uni-number-box"
+  }
+}

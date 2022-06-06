@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "qiun-loading": "../qiun-loading/qiun-loading",
+    "qiun-error": "../qiun-error/qiun-error"
+  }
+}

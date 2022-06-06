@@ -6,7 +6,7 @@
     "pages/BpChart/BpChart",
     "pages/TreatmentPlan/TreatmentPlan",
     "pages/TreatmentPlanHistory/TreatmentPlanHistory",
-    "pages/medicalReport/medicalReport",
+    "pages/MyMedicalReport/MyMedicalReport",
     "pages/uploadPhoto/uploadPhoto",
     "pages/TongueDetail/TongueDetail",
     "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
@@ -47,6 +47,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

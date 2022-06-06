@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/wechatLogin/wechatLogin",
+    "pages/index/index",
+    "pages/BpRecord/BpRecord",
+    "pages/BpChart/BpChart",
+    "pages/TreatmentPlan/TreatmentPlan",
+    "pages/TreatmentPlanHistory/TreatmentPlanHistory",
+    "pages/medicalReport/medicalReport",
+    "pages/uploadPhoto/uploadPhoto",
+    "pages/TongueDetail/TongueDetail",
+    "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
+    "pages/report-ECG/report-ECG",
+    "pages/report-BPWithHeart/report-BPWithHeart",
+    "pages/myself/myself",
+    "pages/PatientInfo/PatientInfo",
+    "pages/myself-setting-push/myself-setting-push",
+    "pages/functionTest/functionTest",
+    "pages/myself-detail/myself-detail"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#5BBD8C",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "disableScroll": true
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#5BBD8C",
+    "borderStyle": "black",
+    "backgroundColor": "#F8F8F8",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabBar/home.png",
+        "selectedIconPath": "static/tabBar/home_activate.png"
+      },
+      {
+        "text": "个人",
+        "pagePath": "pages/myself/myself",
+        "iconPath": "static/tabBar/personal.png",
+        "selectedIconPath": "static/tabBar/personal_activate.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -42,7 +42,7 @@
 				"disableScroll": false
 			}
 		}, {
-			"path": "pages/medicalReport/medicalReport",
+			"path": "pages/MyMedicalReport/MyMedicalReport",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
@@ -189,7 +189,7 @@
 				"query": "id=104"
 			}, {
 				"name": "我的检查报告",
-				"path": "pages/medicalReport/medicalReport",
+				"path": "pages/MyMedicalReport/MyMedicalReport",
 				"query": "id=110"
 			}, {
 				"name": "检验报告-肌酐&BNP",

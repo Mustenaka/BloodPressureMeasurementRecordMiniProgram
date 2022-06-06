@@ -2,7 +2,7 @@
 	<view class="home">
 		<!-- 首部轮播图 -->
 		<view class="header">
-			<text class="header-text">血压录入</text>
+			<text class="header-text">我的检查报告</text>
 		</view>
 
 		<!-- 中部选择框 -->
