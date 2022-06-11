@@ -10,23 +10,16 @@ const _sfc_main = {
     };
   },
   methods: {
-    toPatientInfo() {
+    toBnp() {
       common_vendor.index.navigateTo({
-        url: "/pages/PatientInfo/PatientInfo",
+        url: "bnp/bnp",
         animationType: "pop-in",
         animationDuration: 200
       });
     },
-    toBPWithHeart() {
+    toCreatinine() {
       common_vendor.index.navigateTo({
-        url: "",
-        animationType: "pop-in",
-        animationDuration: 200
-      });
-    },
-    toCreatinineWithBnp() {
-      common_vendor.index.navigateTo({
-        url: "",
+        url: "creatinine/creatinine",
         animationType: "pop-in",
         animationDuration: 200
       });
@@ -35,8 +28,8 @@ const _sfc_main = {
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
-    b: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args))
+    a: common_vendor.o((...args) => $options.toBnp && $options.toBnp(...args)),
+    b: common_vendor.o((...args) => $options.toCreatinine && $options.toCreatinine(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/MyMedicalReport/testIndicator/testIndicator.vue"]]);

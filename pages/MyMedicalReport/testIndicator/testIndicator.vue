@@ -2,16 +2,16 @@
 	<view class="home">
 		<!-- 首部轮播图 -->
 		<view class="header">
-			<text class="header-text">我的检查报告</text>
+			<text class="header-text">我的检验指标列表</text>
 		</view>
 
 		<!-- 中部选择框 -->
 		<view class="box">
 			<view class="item">
-				<text @click="toPatientInfo">BNP</text>
+				<text @click="toBnp">BNP</text>
 			</view>
 			<view class="item">
-				<text @click="toPatientInfo">肌酐</text>
+				<text @click="toCreatinine">肌酐</text>
 			</view>
 		</view>
 
@@ -34,31 +34,21 @@
 			}
 		},
 		methods: {
-			// 跳转到 患者信息 界面
-			toPatientInfo() {
+			// 跳转到 BNP
+			toBnp() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '/pages/PatientInfo/PatientInfo',
+					url: 'bnp/bnp',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
 			},
 			
-			// 跳转到我的检验指标
-			toBPWithHeart() {
+			// 跳转到 肌酐
+			toCreatinine() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '',
-					animationType: "pop-in",
-					animationDuration: 200,
-				});
-			},
-			
-			// 跳转到
-			toCreatinineWithBnp() {
-				uni.navigateTo({
-					//保留当前页面，跳转到应用内的某个页面
-					url: '',
+					url: 'creatinine/creatinine',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
