@@ -116,8 +116,6 @@
 
 		.slogan {
 			font-size: 9pt;
-			text-align: center;
-			letter-spacing: 12px;
 		}
 	}
 </style>

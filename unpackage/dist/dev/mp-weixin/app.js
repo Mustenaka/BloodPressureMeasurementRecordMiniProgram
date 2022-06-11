@@ -13,9 +13,6 @@ if (!Math) {
   "./pages/MyMedicalReport/MyMedicalReport.js";
   "./pages/uploadPhoto/uploadPhoto.js";
   "./pages/TongueDetail/TongueDetail.js";
-  "./pages/report-CreatinineWithBnp/report-CreatinineWithBnp.js";
-  "./pages/report-ECG/report-ECG.js";
-  "./pages/report-BPWithHeart/report-BPWithHeart.js";
   "./pages/myself/myself.js";
   "./pages/PatientInfo/PatientInfo.js";
   "./pages/myself-setting-push/myself-setting-push.js";

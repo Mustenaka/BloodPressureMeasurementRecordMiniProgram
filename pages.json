@@ -59,24 +59,6 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-		}, {
-			"path": "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/report-ECG/report-ECG",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
-		}, {
-			"path": "pages/report-BPWithHeart/report-BPWithHeart",
-			"style": {
-				"navigationBarTitleText": "",
-				"enablePullDownRefresh": false
-			}
 		},
 
 		// B面
@@ -191,18 +173,6 @@
 				"name": "我的检查报告",
 				"path": "pages/MyMedicalReport/MyMedicalReport",
 				"query": "id=110"
-			}, {
-				"name": "检验报告-肌酐&BNP",
-				"path": "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
-				"query": "id=111"
-			}, {
-				"name": "检验报告-心电",
-				"path": "pages/report-ECG/report-ECG",
-				"query": "id=112"
-			}, {
-				"name": "检验报告-血压报告",
-				"path": "pages/report-BPWithHeart/report-BPWithHeart",
-				"query": "id=113"
 			}, {
 				"name": "拍照上传",
 				"path": "pages/uploadPhoto/uploadPhoto",

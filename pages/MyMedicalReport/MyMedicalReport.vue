@@ -8,28 +8,19 @@
 		<!-- 中部选择框 -->
 		<view class="box">
 			<view class="item">
-				<text @click="toPatientInfo">患者信息</text>
+				<text @click="toPatientInfo">我的基本情况</text>
 			</view>
 			<view class="item">
-				<text @click="toPatientInfo">我的肌酐&BNP指标</text>
+				<text @click="toPatientInfo">我的检验指标</text>
 			</view>
 			<view class="item">
-				<text @click="toMyselfSettingPush">我的心电图</text>
-			</view>
-			<view class="item">
-				<text @click="toMyselfSettingPush">我的心超</text>
-			</view>
-			<view class="item">
-				<text @click="toMyselfSettingPush">我的24小时动态血压报告</text>
-			</view>
-			<view class="item">
-				<text @click="toMyselfSettingPush">我的24小时动态心电图</text>
+				<text @click="toMyselfSettingPush">我的检查报告</text>
 			</view>
 		</view>
 
 		<!-- 尾部空白框，计划留作公司信息展示框 -->
 		<view class="box" style="margin-top: 30px;">
-			<text class="slogan">高血压健康记录小程序 - 守护您的健康</text>
+			<text class="slogan">龙医护心小程序 - 守护您的健康</text>
 		</view>
 	</view>
 </template>
