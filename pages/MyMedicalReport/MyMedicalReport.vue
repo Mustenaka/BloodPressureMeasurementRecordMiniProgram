@@ -51,7 +51,7 @@
 			toBPWithHeart() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '/pages/report-BPWithHeart/report-BPWithHeart',
+					url: '',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
@@ -61,7 +61,7 @@
 			toCreatinineWithBnp() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '/pages/report-CreatinineWithBnp/report-CreatinineWithBnp',
+					url: '',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});

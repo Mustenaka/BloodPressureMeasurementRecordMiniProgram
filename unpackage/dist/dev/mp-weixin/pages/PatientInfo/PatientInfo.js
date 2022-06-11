@@ -427,8 +427,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       title: "\u975E\u836F\u7269\u63A7\u5236\u624B\u6BB5",
       padding: true
     }),
-    ao: common_vendor.o((...args) => $options.submit && $options.submit(...args)),
-    ap: common_vendor.o((...args) => $options.submitTest && $options.submitTest(...args))
+    ao: common_vendor.o((...args) => $options.submit && $options.submit(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/PatientInfo/PatientInfo.vue"]]);

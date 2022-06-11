@@ -1,4 +1,8 @@
 <template>
+	<!-->
+		2022.6.11留，经过整理，证明这个模块是当初通宵的时候写的臭代码，为了快速实现功能，耦合性过大，而且信息超级多也没有注意表单的使用，真的很难受。
+		以后要更新的话，这个部分不要尝试修改，直接抛弃，反正后端的接口都是OK的。
+	<-->
 	<view class="home">
 		<!-- 首部轮播图 -->
 		<view class="header">
@@ -168,9 +172,6 @@
 
 			<view class="item">
 				<button type="primary" @click="submit">提交修改</button>
-			</view>
-			<view class="item">
-				<button type="primary" @click="submitTest">测试</button>
 			</view>
 		</view>
 
@@ -349,7 +350,6 @@
 						console.log(err);
 						console.log('请求失败，本页面将认为是第一次获取')
 					})
-
 			},
 
 			submit() {

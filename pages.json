@@ -96,7 +96,61 @@
 			}
 
 		}
-	],
+	    ,{
+            "path" : "pages/MyMedicalReport/testIndicator/bnp/bnp",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/testIndicator/creatinine/creatinine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/medicalReport/ecg/ecg",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 
 	// 全局配置
 	"globalStyle": {
