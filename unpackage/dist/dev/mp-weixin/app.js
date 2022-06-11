@@ -18,6 +18,12 @@ if (!Math) {
   "./pages/myself-setting-push/myself-setting-push.js";
   "./pages/functionTest/functionTest.js";
   "./pages/myself-detail/myself-detail.js";
+  "./pages/MyMedicalReport/testIndicator/bnp/bnp.js";
+  "./pages/MyMedicalReport/testIndicator/creatinine/creatinine.js";
+  "./pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours.js";
+  "./pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours.js";
+  "./pages/MyMedicalReport/medicalReport/ecg/ecg.js";
+  "./pages/MyMedicalReport/medicalReport/echocardiography/echocardiography.js";
 }
 const _sfc_main = {
   onLaunch: function() {

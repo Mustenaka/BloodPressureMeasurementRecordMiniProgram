@@ -19,14 +19,14 @@ const _sfc_main = {
     },
     toBPWithHeart() {
       common_vendor.index.navigateTo({
-        url: "/pages/report-BPWithHeart/report-BPWithHeart",
+        url: "",
         animationType: "pop-in",
         animationDuration: 200
       });
     },
     toCreatinineWithBnp() {
       common_vendor.index.navigateTo({
-        url: "/pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
+        url: "",
         animationType: "pop-in",
         animationDuration: 200
       });
