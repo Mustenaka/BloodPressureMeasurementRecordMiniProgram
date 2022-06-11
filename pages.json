@@ -246,6 +246,38 @@
 				"path": "pages/MyMedicalReport/MyMedicalReport",
 				"query": "id=110"
 			}, {
+				"name": "我的检查报告-我的检查报告列表",
+				"path": "pages/MyMedicalReport/medicalReport/medicalReport",
+				"query": "id=111"
+			}, {
+				"name": "我的检查报告-我的检验指标列表",
+				"path": "pages/MyMedicalReport/testIndicator/testIndicator",
+				"query": "id=112"
+			}, {
+				"name": "我的检查报告-bpr24Hours",
+				"path": "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours",
+				"query": "id=113"
+			}, {
+				"name": "我的检查报告-ecg24Hours",
+				"path": "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours",
+				"query": "id=114"
+			}, {
+				"name": "我的检查报告-ecg",
+				"path": "pages/MyMedicalReport/medicalReport/ecg/ecg",
+				"query": "id=115"
+			}, {
+				"name": "我的检查报告-echocardiography",
+				"path": "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography",
+				"query": "id=116"
+			}, {
+				"name": "我的检验指标-bnp",
+				"path": "pages/MyMedicalReport/testIndicator/bnp/bnp",
+				"query": "id=117"
+			}, {
+				"name": "我的检验指标-creatinine",
+				"path": "pages/MyMedicalReport/testIndicator/creatinine/creatinine",
+				"query": "id=118"
+			}, {
 				"name": "拍照上传",
 				"path": "pages/uploadPhoto/uploadPhoto",
 				"query": "id=120"

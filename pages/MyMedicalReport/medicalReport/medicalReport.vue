@@ -2,22 +2,22 @@
 	<view class="home">
 		<!-- 首部轮播图 -->
 		<view class="header">
-			<text class="header-text">我的检查报告</text>
+			<text class="header-text">我的检查报告列表</text>
 		</view>
 
 		<!-- 中部选择框 -->
 		<view class="box">
 			<view class="item">
-				<text @click="toPatientInfo">24小时动态血压报告</text>
+				<text @click="toBpr24Hours">24小时动态血压报告</text>
 			</view>
 			<view class="item">
-				<text @click="toPatientInfo">24小时动态心电图（ECG）</text>
+				<text @click="toEcg24Hours">24小时动态心电图（ECG）</text>
 			</view>
 			<view class="item">
-				<text @click="toMyselfSettingPush">心电图（ECG）</text>
+				<text @click="toEcg">心电图（ECG）</text>
 			</view>
 			<view class="item">
-				<text @click="toMyselfSettingPush">心超</text>
+				<text @click="toEchocardiography">心超</text>
 			</view>
 		</view>
 
@@ -41,30 +41,40 @@
 		},
 		methods: {
 			// 跳转到 患者信息 界面
-			toPatientInfo() {
+			toBpr24Hours() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '/pages/PatientInfo/PatientInfo',
+					url: 'bpr24Hours/bpr24Hours',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
 			},
 			
 			// 跳转到我的检验指标
-			toBPWithHeart() {
+			toEcg24Hours() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '',
+					url: 'ecg24Hours/ecg24Hours',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
 			},
 			
 			// 跳转到
-			toCreatinineWithBnp() {
+			toEcg() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '',
+					url: 'ecg/ecg',
+					animationType: "pop-in",
+					animationDuration: 200,
+				});
+			},
+			
+			// 跳转到
+			toEchocardiography() {
+				uni.navigateTo({
+					//保留当前页面，跳转到应用内的某个页面
+					url: 'echocardiography/echocardiography',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
