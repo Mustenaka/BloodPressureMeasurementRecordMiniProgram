@@ -2,7 +2,7 @@
 var common_vendor = require("../../../../common/vendor.js");
 const _sfc_main = {
   name: "uniDataChecklist",
-  mixins: [common_vendor.St.mixinDatacom || {}],
+  mixins: [common_vendor.Rt.mixinDatacom || {}],
   emits: ["input", "update:modelValue", "change"],
   props: {
     mode: {

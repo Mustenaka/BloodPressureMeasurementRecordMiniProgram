@@ -50,7 +50,7 @@ function debounce(fn, wait) {
 }
 const _sfc_main = {
   name: "qiun-data-charts",
-  mixins: [common_vendor.St.mixinDatacom],
+  mixins: [common_vendor.Rt.mixinDatacom],
   props: {
     type: {
       type: String,

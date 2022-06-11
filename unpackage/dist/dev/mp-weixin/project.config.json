@@ -72,7 +72,7 @@
           "name": "我的检查报告",
           "query": "id=110",
           "id": 7,
-          "pathName": "pages/medicalReport/medicalReport"
+          "pathName": "pages/MyMedicalReport/MyMedicalReport"
         },
         {
           "name": "检验报告-肌酐&BNP",

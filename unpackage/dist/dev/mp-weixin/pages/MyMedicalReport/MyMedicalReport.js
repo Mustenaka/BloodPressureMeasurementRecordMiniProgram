@@ -42,7 +42,7 @@ const _sfc_main = {
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.o((...args) => _ctx.toMyselfDetail && _ctx.toMyselfDetail(...args)),
+    a: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
     b: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
     c: common_vendor.o((...args) => _ctx.toMyselfSettingPush && _ctx.toMyselfSettingPush(...args)),
     d: common_vendor.o((...args) => _ctx.toMyselfSettingPush && _ctx.toMyselfSettingPush(...args)),

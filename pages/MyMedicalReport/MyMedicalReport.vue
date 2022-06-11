@@ -8,7 +8,7 @@
 		<!-- 中部选择框 -->
 		<view class="box">
 			<view class="item">
-				<text @click="toMyselfDetail">患者信息</text>
+				<text @click="toPatientInfo">患者信息</text>
 			</view>
 			<view class="item">
 				<text @click="toPatientInfo">我的肌酐&BNP指标</text>
@@ -46,6 +46,7 @@
 			}
 		},
 		methods: {
+			// 跳转到 患者信息 界面
 			toPatientInfo() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
@@ -54,6 +55,8 @@
 					animationDuration: 200,
 				});
 			},
+			
+			// 跳转到心电界面
 			toBPWithHeart() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
@@ -62,6 +65,8 @@
 					animationDuration: 200,
 				});
 			},
+			
+			// 跳转到
 			toCreatinineWithBnp() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
@@ -70,6 +75,7 @@
 					animationDuration: 200,
 				});
 			},
+			
 			toECG() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
