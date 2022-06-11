@@ -24,6 +24,8 @@ if (!Math) {
   "./pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours.js";
   "./pages/MyMedicalReport/medicalReport/ecg/ecg.js";
   "./pages/MyMedicalReport/medicalReport/echocardiography/echocardiography.js";
+  "./pages/MyMedicalReport/medicalReport/medicalReport.js";
+  "./pages/MyMedicalReport/testIndicator/testIndicator.js";
 }
 const _sfc_main = {
   onLaunch: function() {

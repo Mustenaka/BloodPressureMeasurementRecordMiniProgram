@@ -150,6 +150,24 @@
             }
             
         }
+        ,{
+            "path" : "pages/MyMedicalReport/medicalReport/medicalReport",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/testIndicator/testIndicator",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 
 	// 全局配置

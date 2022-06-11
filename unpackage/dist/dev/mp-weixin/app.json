@@ -19,7 +19,9 @@
     "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours",
     "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours",
     "pages/MyMedicalReport/medicalReport/ecg/ecg",
-    "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography"
+    "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography",
+    "pages/MyMedicalReport/medicalReport/medicalReport",
+    "pages/MyMedicalReport/testIndicator/testIndicator"
   ],
   "window": {
     "navigationBarTextStyle": "black",
