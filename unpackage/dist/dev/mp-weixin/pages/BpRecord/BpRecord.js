@@ -12,10 +12,26 @@ const _sfc_main = {
     };
   },
   methods: {
+    highChange(value) {
+      this.bpRecord.high = value;
+    },
+    lowChange(value) {
+      this.bpRecord.low = value;
+    },
+    heartRateChange(value) {
+      this.bpRecord.heart_rate = value;
+    },
     submit() {
-      console.log(this.$data.bpRecord.record_date_time);
+      console.log(this.bpRecord.record_date_time.length);
+      if (this.bpRecord.record_date_time.length != 19) {
+        common_vendor.index.showToast({
+          title: "\u672A\u586B\u5199\u65F6\u95F4 | \u65F6\u95F4\u683C\u5F0F\u9519\u8BEF",
+          icon: "none"
+        });
+        return;
+      }
       this.$http.sendRequest("http://1.117.222.119/v1/user/bprecord", "POST", {
-        "RecordDateTime": this.bpRecord.record_date_time,
+        "record_date_time": this.bpRecord.record_date_time,
         "low": this.bpRecord.low,
         "high": this.bpRecord.high,
         "heart_rate": this.bpRecord.heart_rate
@@ -57,33 +73,33 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "datetime",
       modelValue: $data.bpRecord.record_date_time
     }),
-    d: common_vendor.o(($event) => $data.bpRecord.low = $event),
+    d: common_vendor.o($options.lowChange),
     e: common_vendor.p({
+      value: $data.bpRecord.low,
       min: 0,
-      max: 500,
-      modelValue: $data.bpRecord.low
+      max: 500
     }),
     f: common_vendor.p({
       title: "\u4F4E\u538B\u8BB0\u5F55: " + $data.bpRecord.low,
       type: "line",
       padding: true
     }),
-    g: common_vendor.o(($event) => $data.bpRecord.high = $event),
+    g: common_vendor.o($options.highChange),
     h: common_vendor.p({
+      value: $data.bpRecord.high,
       min: 0,
-      max: 500,
-      modelValue: $data.bpRecord.high
+      max: 500
     }),
     i: common_vendor.p({
       title: "\u9AD8\u538B\u8BB0\u5F55: " + $data.bpRecord.high,
       type: "line",
       padding: true
     }),
-    j: common_vendor.o(($event) => $data.bpRecord.heart_rate = $event),
+    j: common_vendor.o($options.heartRateChange),
     k: common_vendor.p({
+      value: $data.bpRecord.heart_rate,
       min: 0,
-      max: 500,
-      modelValue: $data.bpRecord.heart_rate
+      max: 500
     }),
     l: common_vendor.p({
       title: "\u5FC3\u7387\u8BB0\u5F55 : " + $data.bpRecord.heart_rate,

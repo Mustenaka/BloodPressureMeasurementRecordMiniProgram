@@ -18,19 +18,19 @@
 			<view class="item">
 				<text>血压-低压</text>
 				<uni-section :title="'低压记录: '+ bpRecord.low" type="line" padding>
-					<uni-number-box v-model="bpRecord.low" :min="0" :max="500" />
+					<uni-number-box :value="bpRecord.low" @change="lowChange" :min="0" :max="500" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>血压-高压</text>
 				<uni-section :title="'高压记录: '+ bpRecord.high" type="line" padding>
-					<uni-number-box v-model="bpRecord.high" :min="0" :max="500" />
+					<uni-number-box :value="bpRecord.high" @change="highChange" :min="0" :max="500" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>心率</text>
 				<uni-section :title="'心率记录 : '+ bpRecord.heart_rate" type="line" padding>
-					<uni-number-box v-model="bpRecord.heart_rate" :min="0" :max="500" />
+					<uni-number-box :value="bpRecord.heart_rate" @change="heartRateChange" :min="0" :max="500" />
 				</uni-section>
 			</view>
 			<view class="item">
@@ -56,11 +56,29 @@
 		},
 
 		methods: {
+			highChange(value) {
+				this.bpRecord.high = value;
+			},
+			lowChange(value) {
+				this.bpRecord.low = value;
+			},
+			heartRateChange(value) {
+				this.bpRecord.heart_rate = value;
+			},
 			submit() {
-				console.log(this.$data.bpRecord.record_date_time);
+				console.log(this.bpRecord.record_date_time.length);
+
+				if (this.bpRecord.record_date_time.length != 19) {
+					uni,
+					uni.showToast({
+						title: "未填写时间 | 时间格式错误",
+						icon: 'none'
+					});
+					return;
+				}
 
 				this.$http.sendRequest('http://1.117.222.119/v1/user/bprecord', 'POST', {
-					"RecordDateTime": this.bpRecord.record_date_time,
+					"record_date_time": this.bpRecord.record_date_time,
 					"low": this.bpRecord.low,
 					"high": this.bpRecord.high,
 					"heart_rate": this.bpRecord.heart_rate,
