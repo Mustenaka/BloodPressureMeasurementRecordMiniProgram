@@ -2,12 +2,7 @@
 var common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
-    return {
-      swiperList: [
-        "../../static/swiper/swiper1.png",
-        "../../static/swiper/swiper2.png"
-      ]
-    };
+    return {};
   },
   methods: {
     toPatientInfo() {
@@ -17,23 +12,16 @@ const _sfc_main = {
         animationDuration: 200
       });
     },
-    toBPWithHeart() {
+    toTestIndicator() {
       common_vendor.index.navigateTo({
-        url: "",
+        url: "testIndicator/testIndicator",
         animationType: "pop-in",
         animationDuration: 200
       });
     },
-    toCreatinineWithBnp() {
+    toMedicalReport() {
       common_vendor.index.navigateTo({
-        url: "",
-        animationType: "pop-in",
-        animationDuration: 200
-      });
-    },
-    toECG() {
-      common_vendor.index.navigateTo({
-        url: "/pages/report-ECG/report-ECG",
+        url: "medicalReport/medicalReport",
         animationType: "pop-in",
         animationDuration: 200
       });
@@ -43,8 +31,8 @@ const _sfc_main = {
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
-    b: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
-    c: common_vendor.o((...args) => _ctx.toMyselfSettingPush && _ctx.toMyselfSettingPush(...args))
+    b: common_vendor.o((...args) => $options.toTestIndicator && $options.toTestIndicator(...args)),
+    c: common_vendor.o((...args) => $options.toMedicalReport && $options.toMedicalReport(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/MyMedicalReport/MyMedicalReport.vue"]]);

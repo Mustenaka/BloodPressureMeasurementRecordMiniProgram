@@ -11,10 +11,10 @@
 				<text @click="toPatientInfo">我的基本情况</text>
 			</view>
 			<view class="item">
-				<text @click="toPatientInfo">我的检验指标</text>
+				<text @click="toTestIndicator">我的检验指标</text>
 			</view>
 			<view class="item">
-				<text @click="toMyselfSettingPush">我的检查报告</text>
+				<text @click="toMedicalReport">我的检查报告</text>
 			</view>
 		</view>
 
@@ -28,13 +28,7 @@
 <script>
 	export default {
 		data() {
-			return {
-				// 轮播图列表
-				swiperList: [
-					'../../static/swiper/swiper1.png',
-					'../../static/swiper/swiper2.png',
-				],
-			}
+			return {}
 		},
 		methods: {
 			// 跳转到 患者信息 界面
@@ -47,35 +41,25 @@
 				});
 			},
 			
-			// 跳转到心电界面
-			toBPWithHeart() {
+			// 跳转到 我的检验指标
+			toTestIndicator() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '',
+					url: 'testIndicator/testIndicator',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
 			},
 			
-			// 跳转到
-			toCreatinineWithBnp() {
+			// 跳转到 我的检查报告
+			toMedicalReport() {
 				uni.navigateTo({
 					//保留当前页面，跳转到应用内的某个页面
-					url: '',
+					url: 'medicalReport/medicalReport',
 					animationType: "pop-in",
 					animationDuration: 200,
 				});
 			},
-			
-			toECG() {
-				uni.navigateTo({
-					//保留当前页面，跳转到应用内的某个页面
-					url: '/pages/report-ECG/report-ECG',
-					animationType: "pop-in",
-					animationDuration: 200,
-				});
-			},
-
 		}
 	}
 </script>
