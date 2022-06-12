@@ -95,108 +95,93 @@
 				"enablePullDownRefresh": false
 			}
 
+		}, {
+			"path": "pages/MyMedicalReport/testIndicator/bnp/bnp",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/testIndicator/creatinine/creatinine",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/ecg/ecg",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/medicalReport",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/testIndicator/testIndicator",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/testIndicator/bnp/bnpRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/ecg/ecgRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
 	    ,{
-            "path" : "pages/MyMedicalReport/testIndicator/bnp/bnp",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/testIndicator/creatinine/creatinine",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/medicalReport/ecg/ecg",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/medicalReport/medicalReport",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/testIndicator/testIndicator",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/testIndicator/bnp/bnpRecord",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/MyMedicalReport/medicalReport/ecg/ecgRecord",
+            "path" : "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

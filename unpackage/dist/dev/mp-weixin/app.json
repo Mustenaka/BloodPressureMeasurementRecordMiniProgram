@@ -25,7 +25,8 @@
     "pages/MyMedicalReport/testIndicator/bnp/bnpRecord",
     "pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord",
     "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
-    "pages/MyMedicalReport/medicalReport/ecg/ecgRecord"
+    "pages/MyMedicalReport/medicalReport/ecg/ecgRecord",
+    "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord"
   ],
   "window": {
     "navigationBarTextStyle": "black",

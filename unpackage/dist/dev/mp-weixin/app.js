@@ -30,6 +30,7 @@ if (!Math) {
   "./pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord.js";
   "./pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord.js";
   "./pages/MyMedicalReport/medicalReport/ecg/ecgRecord.js";
+  "./pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord.js";
 }
 const _sfc_main = {
   onLaunch: function() {
