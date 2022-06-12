@@ -32,6 +32,7 @@ if (!Math) {
   "./pages/MyMedicalReport/medicalReport/ecg/ecgRecord.js";
   "./pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord.js";
   "./pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24HoursRecord.js";
+  "./pages/TongueDetail/TongueDetailRecord.js";
 }
 const _sfc_main = {
   onLaunch: function() {

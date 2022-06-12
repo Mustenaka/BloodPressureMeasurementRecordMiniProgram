@@ -2,35 +2,50 @@
 var common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
-    return {};
+    return {
+      Array: []
+    };
+  },
+  onLoad() {
+    this.getData();
+  },
+  methods: {
+    getData() {
+      const url = "http://1.117.222.119/v1/user/tonguedetail?limit_count=0";
+      this.$http.sendRequest(url, "GET", {}).then((res) => {
+        console.log(res);
+        var Array = res.data.data;
+        Array.forEach((item, index, arr) => {
+          item.create_at = item.create_at.slice(0, 10);
+        });
+        this.Array = Array;
+        console.log(this.Array);
+      }).catch((err) => {
+        console.log(err);
+      });
+    },
+    submit() {
+      common_vendor.index.navigateTo({
+        url: "TongueDetailRecord",
+        animationType: "pop-in",
+        animationDuration: 200
+      });
+    }
   }
 };
-if (!Array) {
-  const _easycom_uni_card2 = common_vendor.resolveComponent("uni-card");
-  const _easycom_uni_file_picker2 = common_vendor.resolveComponent("uni-file-picker");
-  const _component_uni_section = common_vendor.resolveComponent("uni-section");
-  (_easycom_uni_card2 + _easycom_uni_file_picker2 + _component_uni_section)();
-}
-const _easycom_uni_card = () => "../../uni_modules/uni-card/components/uni-card/uni-card.js";
-const _easycom_uni_file_picker = () => "../../uni_modules/uni-file-picker/components/uni-file-picker/uni-file-picker.js";
-if (!Math) {
-  (_easycom_uni_card + _easycom_uni_file_picker)();
-}
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.p({
-      ["is-shadow"]: false,
-      ["is-full"]: true
+    a: common_vendor.f(this.Array, (value, key, index) => {
+      return {
+        a: common_vendor.t(index + 1),
+        b: common_vendor.t(value.create_at),
+        c: common_vendor.t(value.tongue),
+        d: common_vendor.t(value.tongue_coating),
+        e: common_vendor.t(value.pulse),
+        f: key
+      };
     }),
-    b: common_vendor.p({
-      limit: "9",
-      title: "\u6700\u591A\u9009\u62E99\u5F20\u56FE\u7247\u534F\u52A9\u5206\u6790"
-    }),
-    c: common_vendor.p({
-      title: "\u53EA\u9009\u62E9\u56FE\u7247",
-      type: "line"
-    }),
-    d: common_vendor.o((...args) => _ctx.submit && _ctx.submit(...args))
+    b: common_vendor.o((...args) => $options.submit && $options.submit(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/TongueDetail/TongueDetail.vue"]]);

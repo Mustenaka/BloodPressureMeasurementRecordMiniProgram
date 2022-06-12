@@ -27,7 +27,8 @@
     "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
     "pages/MyMedicalReport/medicalReport/ecg/ecgRecord",
     "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord",
-    "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24HoursRecord"
+    "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24HoursRecord",
+    "pages/TongueDetail/TongueDetailRecord"
   ],
   "window": {
     "navigationBarTextStyle": "black",

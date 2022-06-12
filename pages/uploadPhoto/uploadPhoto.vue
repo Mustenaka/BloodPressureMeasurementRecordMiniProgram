@@ -8,16 +8,18 @@
 		<!-- 中部选择框 -->
 		<view class="box">
 			<uni-card :is-shadow="false" is-full>
-				<text class="uni-h6">文件选择上传组件，可以选择图片、视频等任意文件并上传到当前绑定的服务空间。</text>
+				<text class="uni-h6">照片上传在于给不清楚操作的用户，可以选择图片文件，上传我们的后台服务器，我们后台人工录入您的数据。</text>
 			</uni-card>
 			<uni-section title="只选择图片" type="line">
 				<view class="example-body">
-					<uni-file-picker limit="9" title="最多选择9张图片"></uni-file-picker>
+					<uni-file-picker ref="files" :autoUpload="false" fileMediatype="image" :image-styles="imageStyles" limit="9" title="最多选择9张图片">
+						
+					</uni-file-picker>
 				</view>
 			</uni-section>
 
 			<view class="item">
-				<button type="primary" @click="submit" disabled="true">提交照片</button>
+				<button type="primary" @click="submit">提交照片</button>
 			</view>
 		</view>
 
@@ -32,9 +34,17 @@
 	export default {
 		data() {
 			return {
-
 			};
-		}
+		},
+		methods: {
+			submit() {
+				console.log('提交成功');
+				uni, uni.showToast({
+					title: "提交成功",
+					icon: 'none'
+				});
+			}
+		},
 	}
 </script>
 

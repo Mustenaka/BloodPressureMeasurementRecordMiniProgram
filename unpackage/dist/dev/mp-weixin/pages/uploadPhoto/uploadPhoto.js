@@ -3,6 +3,15 @@ var common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
     return {};
+  },
+  methods: {
+    submit() {
+      console.log("\u63D0\u4EA4\u6210\u529F");
+      common_vendor.index.showToast({
+        title: "\u63D0\u4EA4\u6210\u529F",
+        icon: "none"
+      });
+    }
   }
 };
 if (!Array) {
@@ -22,15 +31,19 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       ["is-shadow"]: false,
       ["is-full"]: true
     }),
-    b: common_vendor.p({
+    b: common_vendor.sr("files", "4865bac4-2,4865bac4-1"),
+    c: common_vendor.p({
+      autoUpload: false,
+      fileMediatype: "image",
+      ["image-styles"]: _ctx.imageStyles,
       limit: "9",
       title: "\u6700\u591A\u9009\u62E99\u5F20\u56FE\u7247"
     }),
-    c: common_vendor.p({
+    d: common_vendor.p({
       title: "\u53EA\u9009\u62E9\u56FE\u7247",
       type: "line"
     }),
-    d: common_vendor.o((...args) => _ctx.submit && _ctx.submit(...args))
+    e: common_vendor.o((...args) => $options.submit && $options.submit(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/uploadPhoto/uploadPhoto.vue"]]);
