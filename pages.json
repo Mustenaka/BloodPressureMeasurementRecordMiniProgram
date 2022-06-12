@@ -94,7 +94,6 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/MyMedicalReport/testIndicator/bnp/bnp",
 			"style": {
@@ -136,60 +135,56 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/MyMedicalReport/medicalReport/medicalReport",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/MyMedicalReport/testIndicator/testIndicator",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/MyMedicalReport/testIndicator/bnp/bnpRecord",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
 		}, {
 			"path": "pages/MyMedicalReport/medicalReport/ecg/ecgRecord",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
-
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24HoursRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
 		}
-	    ,{
-            "path" : "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 
 	// 全局配置
 	"globalStyle": {
@@ -201,7 +196,7 @@
 		"enablePullDownRefresh": true,
 		"backgroundTextStyle": "light",
 		// 小程序禁止滚动
-		"disableScroll": true
+		"disableScroll": false
 	},
 
 	// 底部框

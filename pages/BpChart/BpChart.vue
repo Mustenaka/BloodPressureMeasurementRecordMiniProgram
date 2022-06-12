@@ -29,10 +29,6 @@
 			</view>
 		</view>
 
-		<!-- 尾部空白框，计划留作公司信息展示框 -->
-		<view class="box" style="margin-top: 30px;">
-			<text class="slogan">龙医护心小程序 - 守护您的健康</text>
-		</view>
 	</view>
 </template>
 
