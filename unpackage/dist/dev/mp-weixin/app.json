@@ -24,7 +24,8 @@
     "pages/MyMedicalReport/testIndicator/testIndicator",
     "pages/MyMedicalReport/testIndicator/bnp/bnpRecord",
     "pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord",
-    "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord"
+    "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
+    "pages/MyMedicalReport/medicalReport/ecg/ecgRecord"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -58,6 +59,5 @@
   "uniStatistics": {
     "enable": true
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

@@ -29,6 +29,7 @@ if (!Math) {
   "./pages/MyMedicalReport/testIndicator/bnp/bnpRecord.js";
   "./pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord.js";
   "./pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord.js";
+  "./pages/MyMedicalReport/medicalReport/ecg/ecgRecord.js";
 }
 const _sfc_main = {
   onLaunch: function() {

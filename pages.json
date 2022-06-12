@@ -195,6 +195,15 @@
             }
             
         }
+        ,{
+            "path" : "pages/MyMedicalReport/medicalReport/ecg/ecgRecord",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 
 	// 全局配置

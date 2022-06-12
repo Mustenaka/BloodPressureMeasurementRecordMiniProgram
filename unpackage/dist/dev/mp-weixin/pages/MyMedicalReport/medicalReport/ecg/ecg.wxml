@@ -1,1 +1,1 @@
-<view></view>
+<view class="home"><view class="header"><text class="header-text">我的心电（ECG）记录</text></view><view class="box"><view wx:for="{{a}}" wx:for-item="value" wx:key="d" class="item"><view class="item_detail"><text class="text_left">记录{{value.a}}</text><text class="text_right">{{value.b}}</text></view><view class="item_detail"><text class="text_right">{{value.c}}</text></view></view><view class="item"><button type="primary" bindtap="{{b}}">新增心电记录</button></view></view></view>
