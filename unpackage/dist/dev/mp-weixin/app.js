@@ -26,6 +26,9 @@ if (!Math) {
   "./pages/MyMedicalReport/medicalReport/echocardiography/echocardiography.js";
   "./pages/MyMedicalReport/medicalReport/medicalReport.js";
   "./pages/MyMedicalReport/testIndicator/testIndicator.js";
+  "./pages/MyMedicalReport/testIndicator/bnp/bnpRecord.js";
+  "./pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord.js";
+  "./pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord.js";
 }
 const _sfc_main = {
   onLaunch: function() {

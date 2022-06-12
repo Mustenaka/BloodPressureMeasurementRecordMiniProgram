@@ -168,6 +168,33 @@
             }
             
         }
+        ,{
+            "path" : "pages/MyMedicalReport/testIndicator/bnp/bnpRecord",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 
 	// 全局配置
