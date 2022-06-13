@@ -6,17 +6,29 @@
     "pages/BpChart/BpChart",
     "pages/TreatmentPlan/TreatmentPlan",
     "pages/TreatmentPlanHistory/TreatmentPlanHistory",
-    "pages/medicalReport/medicalReport",
+    "pages/MyMedicalReport/MyMedicalReport",
     "pages/uploadPhoto/uploadPhoto",
     "pages/TongueDetail/TongueDetail",
-    "pages/report-CreatinineWithBnp/report-CreatinineWithBnp",
-    "pages/report-ECG/report-ECG",
-    "pages/report-BPWithHeart/report-BPWithHeart",
     "pages/myself/myself",
     "pages/PatientInfo/PatientInfo",
     "pages/myself-setting-push/myself-setting-push",
     "pages/functionTest/functionTest",
-    "pages/myself-detail/myself-detail"
+    "pages/myself-detail/myself-detail",
+    "pages/MyMedicalReport/testIndicator/bnp/bnp",
+    "pages/MyMedicalReport/testIndicator/creatinine/creatinine",
+    "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours",
+    "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours",
+    "pages/MyMedicalReport/medicalReport/ecg/ecg",
+    "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography",
+    "pages/MyMedicalReport/medicalReport/medicalReport",
+    "pages/MyMedicalReport/testIndicator/testIndicator",
+    "pages/MyMedicalReport/testIndicator/bnp/bnpRecord",
+    "pages/MyMedicalReport/testIndicator/creatinine/creatinineRecord",
+    "pages/MyMedicalReport/medicalReport/echocardiography/echocardiographyRecord",
+    "pages/MyMedicalReport/medicalReport/ecg/ecgRecord",
+    "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24HoursRecord",
+    "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24HoursRecord",
+    "pages/TongueDetail/TongueDetailRecord"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -25,7 +37,7 @@
     "backgroundColor": "#5BBD8C",
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "light",
-    "disableScroll": true
+    "disableScroll": false
   },
   "tabBar": {
     "color": "#7A7E83",
@@ -46,6 +58,9 @@
         "selectedIconPath": "static/tabBar/personal_activate.png"
       }
     ]
+  },
+  "uniStatistics": {
+    "enable": true
   },
   "usingComponents": {}
 }

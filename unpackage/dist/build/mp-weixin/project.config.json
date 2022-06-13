@@ -72,60 +72,90 @@
           "name": "我的检查报告",
           "query": "id=110",
           "id": 7,
-          "pathName": "pages/medicalReport/medicalReport"
+          "pathName": "pages/MyMedicalReport/MyMedicalReport"
         },
         {
-          "name": "检验报告-肌酐&BNP",
+          "name": "我的检查报告-我的检查报告列表",
           "query": "id=111",
           "id": 8,
-          "pathName": "pages/report-CreatinineWithBnp/report-CreatinineWithBnp"
+          "pathName": "pages/MyMedicalReport/medicalReport/medicalReport"
         },
         {
-          "name": "检验报告-心电",
+          "name": "我的检查报告-我的检验指标列表",
           "query": "id=112",
           "id": 9,
-          "pathName": "pages/report-ECG/report-ECG"
+          "pathName": "pages/MyMedicalReport/testIndicator/testIndicator"
         },
         {
-          "name": "检验报告-血压报告",
+          "name": "我的检查报告-bpr24Hours",
           "query": "id=113",
           "id": 10,
-          "pathName": "pages/report-BPWithHeart/report-BPWithHeart"
+          "pathName": "pages/MyMedicalReport/medicalReport/bpr24Hours/bpr24Hours"
+        },
+        {
+          "name": "我的检查报告-ecg24Hours",
+          "query": "id=114",
+          "id": 11,
+          "pathName": "pages/MyMedicalReport/medicalReport/ecg24Hours/ecg24Hours"
+        },
+        {
+          "name": "我的检查报告-ecg",
+          "query": "id=115",
+          "id": 12,
+          "pathName": "pages/MyMedicalReport/medicalReport/ecg/ecg"
+        },
+        {
+          "name": "我的检查报告-echocardiography",
+          "query": "id=116",
+          "id": 13,
+          "pathName": "pages/MyMedicalReport/medicalReport/echocardiography/echocardiography"
+        },
+        {
+          "name": "我的检验指标-bnp",
+          "query": "id=117",
+          "id": 14,
+          "pathName": "pages/MyMedicalReport/testIndicator/bnp/bnp"
+        },
+        {
+          "name": "我的检验指标-creatinine",
+          "query": "id=118",
+          "id": 15,
+          "pathName": "pages/MyMedicalReport/testIndicator/creatinine/creatinine"
         },
         {
           "name": "拍照上传",
           "query": "id=120",
-          "id": 11,
+          "id": 16,
           "pathName": "pages/uploadPhoto/uploadPhoto"
         },
         {
           "name": "舌苔脉象",
           "query": "id=121",
-          "id": 12,
+          "id": 17,
           "pathName": "pages/TongueDetail/TongueDetail"
         },
         {
           "name": "我的(B面主页)",
           "query": "id=200",
-          "id": 13,
+          "id": 18,
           "pathName": "pages/myself/myself"
         },
         {
           "name": "我的账户信息",
           "query": "id=201",
-          "id": 14,
+          "id": 19,
           "pathName": "pages/myself-detail/myself-detail"
         },
         {
           "name": "患者信息",
           "query": "id=202",
-          "id": 15,
+          "id": 20,
           "pathName": "pages/PatientInfo/PatientInfo"
         },
         {
           "name": "推送设置",
           "query": "id=203",
-          "id": 16,
+          "id": 21,
           "pathName": "pages/myself-setting-push/myself-setting-push"
         }
       ]
