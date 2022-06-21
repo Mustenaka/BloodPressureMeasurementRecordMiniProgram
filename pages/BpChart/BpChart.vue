@@ -12,7 +12,7 @@
 			</view>
 			<view class="item">
 				<view class="charts-box">
-					<qiun-data-charts type="line" :opts="opts" :chartData="chartData" :ontouch="true">
+					<qiun-data-charts type="line" :opts="opts" :chartData="chartData" :ontouch="true" :canvas2d="true">
 					</qiun-data-charts>
 				</view>
 			</view>

@@ -135,7 +135,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "line",
       opts: $data.opts,
       chartData: $data.chartData,
-      ontouch: true
+      ontouch: true,
+      canvas2d: true
     }),
     b: common_vendor.o((...args) => $options.submit7days && $options.submit7days(...args)),
     c: common_vendor.o((...args) => $options.submit30days && $options.submit30days(...args)),
