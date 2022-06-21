@@ -11,9 +11,9 @@
 
 		<!-- 中部选择框 -->
 		<view class="box">
-			<view class="item">
+<!-- 			<view class="item">
 				<text @click="toMyselfDetail">我的账户</text>
-			</view>
+			</view> -->
 			<view class="item">
 				<text @click="toPatientInfo">患者信息</text>
 			</view>

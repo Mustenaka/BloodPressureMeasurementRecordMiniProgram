@@ -1,15 +1,6 @@
 {
 	// 页面设置
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		// 登陆页面
-		{
-			"path": "pages/wechatLogin/wechatLogin",
-			"style": {
-				"navigationBarTitleText": "微信登录",
-				"enablePullDownRefresh": false
-			}
-		},
-
 		// A面
 		{
 			"path": "pages/index/index",
@@ -61,20 +52,31 @@
 			}
 		},
 
-		// B面
+		// 登陆页面
+		{
+			"path": "pages/wechatLogin/wechatLogin",
+			"style": {
+				"navigationBarTitleText": "微信登录",
+				"enablePullDownRefresh": false
+			}
+		},
+
+		//B面 
 		{
 			"path": "pages/myself/myself",
 			"style": {
 				"navigationBarTitleText": "我的"
 			}
-		}, {
+		},
+		{
 			"path": "pages/PatientInfo/PatientInfo",
 			"style": {
 				"navigationBarTitleText": "患者信息",
 				"enablePullDownRefresh": false,
 				"disableScroll": false
 			}
-		}, {
+		},
+		{
 			"path": "pages/myself-setting-push/myself-setting-push",
 			"style": {
 				"navigationBarTitleText": "",
@@ -183,17 +185,15 @@
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
+		}, {
+			"path": "pages/TongueDetail/TongueDetailRecord",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
 		}
-	    ,{
-            "path" : "pages/TongueDetail/TongueDetailRecord",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+	],
 
 	// 全局配置
 	"globalStyle": {
@@ -316,15 +316,18 @@
 				"name": "我的(B面主页)",
 				"path": "pages/myself/myself",
 				"query": "id=200"
-			}, {
-				"name": "我的账户信息",
-				"path": "pages/myself-detail/myself-detail",
-				"query": "id=201"
-			}, {
+			},
+			// {
+			// 	"name": "我的账户信息",
+			// 	"path": "pages/myself-detail/myself-detail",
+			// 	"query": "id=201"
+			// }, 
+			{
 				"name": "患者信息",
 				"path": "pages/PatientInfo/PatientInfo",
 				"query": "id=202"
-			}, {
+			},
+			{
 				"name": "推送设置",
 				"path": "pages/myself-setting-push/myself-setting-push",
 				"query": "id=203"

@@ -4,40 +4,7 @@
     "ignore": []
   },
   "setting": {
-    "urlCheck": false,
-    "es6": true,
-    "enhance": true,
-    "postcss": true,
-    "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": false,
-    "coverView": true,
-    "nodeModules": false,
-    "autoAudits": false,
-    "showShadowRootInWxmlPanel": true,
-    "scopeDataCheck": false,
-    "uglifyFileName": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": true,
-    "useApiHook": true,
-    "useApiHostProcess": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    },
-    "enableEngineNative": false,
-    "bundle": false,
-    "useIsolateContext": true,
-    "useCompilerModule": true,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
-    "packNpmManually": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true
+    "urlCheck": false
   },
   "compileType": "miniprogram",
   "libVersion": "",
@@ -45,15 +12,19 @@
   "projectname": "BloodPressureMeasurementRecordMiniProgram",
   "condition": {
     "search": {
+      "current": -1,
       "list": []
     },
     "conversation": {
+      "current": -1,
       "list": []
     },
     "game": {
+      "current": -1,
       "list": []
     },
     "miniprogram": {
+      "current": 0,
       "list": [
         {
           "name": "注册登录页面",
@@ -170,21 +141,15 @@
           "pathName": "pages/myself/myself"
         },
         {
-          "name": "我的账户信息",
-          "query": "id=201",
-          "id": 19,
-          "pathName": "pages/myself-detail/myself-detail"
-        },
-        {
           "name": "患者信息",
           "query": "id=202",
-          "id": 20,
+          "id": 19,
           "pathName": "pages/PatientInfo/PatientInfo"
         },
         {
           "name": "推送设置",
           "query": "id=203",
-          "id": 21,
+          "id": 20,
           "pathName": "pages/myself-setting-push/myself-setting-push"
         }
       ]

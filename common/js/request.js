@@ -15,6 +15,25 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 	// 	types = 'application/json';
 	// 
 
+	// 如果用户没有token信息（则表示）未登录状态，做一个跳转
+	var temp = uni.getStorageSync('token');
+	console.log("token status:" + temp);
+	if (temp == null || temp == "") {
+		// 跳转到登录页面
+		uni.showModal({
+			title: '登录提示',
+			content: '身份已过期，请重新登录后再来操作！',
+			success: ress => {
+				if (ress.confirm) {
+					uni.redirectTo({
+						url: redirectPages,
+					})
+				}
+			}
+		})
+		throw new Error('无法录入-因为没有登录'); //传入message
+	}
+
 	var token = "Bearer " + uni.getStorageSync('token') || '';
 	console.log('get Token:' + token);
 
@@ -29,7 +48,7 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 				'Accept': '*/*',
 				'Authorization': token
 			},
-			
+
 			success(res) {
 				if (res.header.authorization || res.header.Authorization) {
 					uni.setStorageSync('token', res.header.authorization || res.header

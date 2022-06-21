@@ -4,7 +4,6 @@ exports[Symbol.toStringTag] = "Module";
 var common_vendor = require("./common/vendor.js");
 var common_js_request = require("./common/js/request.js");
 if (!Math) {
-  "./pages/wechatLogin/wechatLogin.js";
   "./pages/index/index.js";
   "./pages/BpRecord/BpRecord.js";
   "./pages/BpChart/BpChart.js";
@@ -13,6 +12,7 @@ if (!Math) {
   "./pages/MyMedicalReport/MyMedicalReport.js";
   "./pages/uploadPhoto/uploadPhoto.js";
   "./pages/TongueDetail/TongueDetail.js";
+  "./pages/wechatLogin/wechatLogin.js";
   "./pages/myself/myself.js";
   "./pages/PatientInfo/PatientInfo.js";
   "./pages/myself-setting-push/myself-setting-push.js";

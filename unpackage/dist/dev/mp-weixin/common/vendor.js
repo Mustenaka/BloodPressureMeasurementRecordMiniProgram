@@ -6169,7 +6169,7 @@ let statConfig = {
   appid: "__UNI__540E998"
 };
 let titleJsons = {};
-titleJsons = { "pages/wechatLogin/wechatLogin": "\u5FAE\u4FE1\u767B\u5F55", "pages/index/index": "\u8840\u538B\u5065\u5EB7\u8BB0\u5F55\u5C0F\u7A0B\u5E8F", "pages/BpRecord/BpRecord": "\u8840\u538B\u5F55\u5165", "pages/BpChart/BpChart": "\u8840\u538B\u8BB0\u5F55\u8868", "pages/TreatmentPlan/TreatmentPlan": "\u6CBB\u7597\u65B9\u6848", "pages/TreatmentPlanHistory/TreatmentPlanHistory": "\u5386\u53F2\u6CBB\u7597\u65B9\u6848", "pages/myself/myself": "\u6211\u7684", "pages/PatientInfo/PatientInfo": "\u60A3\u8005\u4FE1\u606F", "pages/functionTest/functionTest": "\u529F\u80FD\u6D4B\u8BD5\u9875\u9762" };
+titleJsons = { "pages/index/index": "\u8840\u538B\u5065\u5EB7\u8BB0\u5F55\u5C0F\u7A0B\u5E8F", "pages/BpRecord/BpRecord": "\u8840\u538B\u5F55\u5165", "pages/BpChart/BpChart": "\u8840\u538B\u8BB0\u5F55\u8868", "pages/TreatmentPlan/TreatmentPlan": "\u6CBB\u7597\u65B9\u6848", "pages/TreatmentPlanHistory/TreatmentPlanHistory": "\u5386\u53F2\u6CBB\u7597\u65B9\u6848", "pages/wechatLogin/wechatLogin": "\u5FAE\u4FE1\u767B\u5F55", "pages/myself/myself": "\u6211\u7684", "pages/PatientInfo/PatientInfo": "\u60A3\u8005\u4FE1\u606F", "pages/functionTest/functionTest": "\u529F\u80FD\u6D4B\u8BD5\u9875\u9762" };
 const UUID_KEY = "__DC_STAT_UUID";
 const UUID_VALUE = "__DC_UUID_VALUE";
 function getUuid() {
