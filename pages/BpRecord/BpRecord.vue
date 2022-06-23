@@ -18,19 +18,19 @@
 			<view class="item">
 				<text>血压-低压</text>
 				<uni-section :title="'低压记录: '+ bpRecord.low" type="line" padding>
-					<uni-number-box :value="bpRecord.low" @change="lowChange" :min="0" :max="500" />
+					<uni-number-box :value="bpRecord.low" @change="lowChange" :min="0" :max="300" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>血压-高压</text>
 				<uni-section :title="'高压记录: '+ bpRecord.high" type="line" padding>
-					<uni-number-box :value="bpRecord.high" @change="highChange" :min="0" :max="500" />
+					<uni-number-box :value="bpRecord.high" @change="highChange" :min="0" :max="300" />
 				</uni-section>
 			</view>
 			<view class="item">
 				<text>心率</text>
 				<uni-section :title="'心率记录 : '+ bpRecord.heart_rate" type="line" padding>
-					<uni-number-box :value="bpRecord.heart_rate" @change="heartRateChange" :min="0" :max="500" />
+					<uni-number-box :value="bpRecord.heart_rate" @change="heartRateChange" :min="0" :max="300" />
 				</uni-section>
 			</view>
 			<view class="item">
@@ -66,9 +66,7 @@
 				this.bpRecord.heart_rate = value;
 			},
 			submit() {
-				console.log(this.bpRecord.record_date_time.length);
-
-				if (this.bpRecord.record_date_time.length != 19) {
+				if (this.validation() == false) {
 					uni,
 					uni.showToast({
 						title: "未填写时间 | 时间格式错误",
@@ -97,6 +95,29 @@
 						icon: 'none'
 					})
 				})
+			},
+
+			validation() {
+				// 用卫语句处理数据校验
+
+				// 时间格式：日期+时间，长度为19
+				if (this.bpRecord.record_date_time.length != 19) {
+					return false;
+				}
+
+				// 血压记录，数据范围 (0,300] - 不可能有活人血压是0吧
+				if (this.bpRecord.low <= 0 || this.bpRecord.low > 300) {
+					return false;
+				}
+				if (this.bpRecord.high <= 0 || this.bpRecord.high > 300) {
+					return false;
+				}
+
+				// 心率记录，数据范围 (0,500]
+				if (this.bpRecord.heart_rate <= 0 || this.bpRecord.heart_rate > 500) {
+					return false;
+				}
+				return true;
 			}
 		}
 	}

@@ -22,8 +22,7 @@ const _sfc_main = {
       this.bpRecord.heart_rate = value;
     },
     submit() {
-      console.log(this.bpRecord.record_date_time.length);
-      if (this.bpRecord.record_date_time.length != 19) {
+      if (this.validation() == false) {
         common_vendor.index.showToast({
           title: "\u672A\u586B\u5199\u65F6\u95F4 | \u65F6\u95F4\u683C\u5F0F\u9519\u8BEF",
           icon: "none"
@@ -48,6 +47,21 @@ const _sfc_main = {
           icon: "none"
         });
       });
+    },
+    validation() {
+      if (this.bpRecord.record_date_time.length != 19) {
+        return false;
+      }
+      if (this.bpRecord.low <= 0 || this.bpRecord.low > 300) {
+        return false;
+      }
+      if (this.bpRecord.high <= 0 || this.bpRecord.high > 300) {
+        return false;
+      }
+      if (this.bpRecord.heart_rate <= 0 || this.bpRecord.heart_rate > 500) {
+        return false;
+      }
+      return true;
     }
   }
 };
@@ -77,7 +91,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     e: common_vendor.p({
       value: $data.bpRecord.low,
       min: 0,
-      max: 500
+      max: 300
     }),
     f: common_vendor.p({
       title: "\u4F4E\u538B\u8BB0\u5F55: " + $data.bpRecord.low,
@@ -88,7 +102,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     h: common_vendor.p({
       value: $data.bpRecord.high,
       min: 0,
-      max: 500
+      max: 300
     }),
     i: common_vendor.p({
       title: "\u9AD8\u538B\u8BB0\u5F55: " + $data.bpRecord.high,
@@ -99,7 +113,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     k: common_vendor.p({
       value: $data.bpRecord.heart_rate,
       min: 0,
-      max: 500
+      max: 300
     }),
     l: common_vendor.p({
       title: "\u5FC3\u7387\u8BB0\u5F55 : " + $data.bpRecord.heart_rate,

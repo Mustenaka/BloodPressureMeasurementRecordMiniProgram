@@ -1,45 +1,62 @@
-// import { type } from "os";
-
 // 重定向页面，这里应该采用用于登录的页面
-const redirectPages = '/pages/wechatLogin/wechatLogin'
+const redirectPages = '/pages/wechatLogin/wechatLogin';
+const baseUrl = 'https://www.lyhxxcx.cn/';
 
-//封装request请求
-const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/json') => {
-	//判断header提交数据类型
-	let types = '';
-	// if (method == 'POST' && !contentType) {
-	// 	types = 'application/x-www-form-urlencoded'
-	// } else if (method == 'POST' && contentType) {
-	// 	types = contentType
-	// } else {
-	// 	types = 'application/json';
-	// 
-
-	// 如果用户没有token信息（则表示）未登录状态，做一个跳转
-	var temp = uni.getStorageSync('token');
-	console.log("token status:" + temp);
-	if (temp == null || temp == "") {
-		// 跳转到登录页面
-		uni.showModal({
-			title: '登录提示',
-			content: '身份已过期，请重新登录后再来操作！',
-			success: ress => {
-				if (ress.confirm) {
-					uni.redirectTo({
-						url: redirectPages,
-					})
-				}
+/**
+ * 跳转到登陆页面
+ */
+function redirectToLogin() {
+	// 跳转到登录页面
+	uni.showModal({
+		title: '登录提示',
+		content: '身份已过期，请重新登录后再来操作！',
+		success: ress => {
+			if (ress.confirm) {
+				uni.redirectTo({
+					url: redirectPages,
+				})
 			}
-		})
-		throw new Error('无法录入-因为没有登录'); //传入message
+		},
+		fail(err) {
+			uni,
+			uni.showToast({
+				title: "未登录",
+				icon: 'none'
+			})
+		}
+	})
+}
+
+/**
+ * 404 未找到页面错误
+ */
+function error404page() {
+	uni,
+	uni.showToast({
+		title: "服务器资源错误 - 404",
+		icon: 'none'
+	})
+}
+
+
+
+// 封装的统一 request 请求
+const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/json') => {
+	// 如果用户没有token信息（则表示）未登录状态，做一个跳转
+	var baseToken = uni.getStorageSync('token');
+	if (baseToken == null || baseToken == "") {
+		this.redirectToLogin();
+		throw new Error('无法操作 - 因为没有登录'); //传入message
 	}
 
-	var token = "Bearer " + uni.getStorageSync('token') || '';
-	console.log('get Token:' + token);
+	// 发送reqest请求，并包含token信息
+	var token = "Bearer " + baseToken || '';
+	console.log('Get Token Information: ' + token);
 
+	// 构建请求的 request 信息
 	return new Promise(function(resolve, reject) {
 		uni.request({
-			url: url,
+			url: baseUrl + url,
 			data: data,
 			method: method,
 			header: {
@@ -50,24 +67,20 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 			},
 
 			success(res) {
-				if (res.header.authorization || res.header.Authorization) {
-					uni.setStorageSync('token', res.header.authorization || res.header
-						.Authorization);
+				// 认证返回的token信息不为空，则更新token
+				var authorization = res.header.authorization || res.header.Authorization;
+				if (authorization) {
+					uni.setStorageSync('token', authorization);
 				}
+
+				// 获取状态码并解析
 				var code = res.statusCode;
 				switch (code) {
 					case 401:
-						uni.showModal({
-							title: '登录提示',
-							content: '身份已过期，请重新登录后再来操作！',
-							success: ress => {
-								if (ress.confirm) {
-									uni.redirectTo({
-										url: redirectPages,
-									})
-								}
-							}
-						})
+						this.redirectToLogin();
+						break;
+					case 404:
+						this.error404page();
 						break;
 					default:
 						resolve(res);
@@ -80,8 +93,6 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 		})
 	})
 }
-
-// module.exports.sendRequest = sendRequest
 
 export default {
 	sendRequest: sendRequest
