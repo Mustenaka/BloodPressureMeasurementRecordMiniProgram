@@ -2,50 +2,12 @@
 const redirectPages = '/pages/wechatLogin/wechatLogin';
 const baseUrl = 'https://www.lyhxxcx.cn/';
 
-/**
- * 跳转到登陆页面
- */
-function redirectToLogin() {
-	// 跳转到登录页面
-	uni.showModal({
-		title: '登录提示',
-		content: '身份已过期，请重新登录后再来操作！',
-		success: ress => {
-			if (ress.confirm) {
-				uni.redirectTo({
-					url: redirectPages,
-				})
-			}
-		},
-		fail(err) {
-			uni,
-			uni.showToast({
-				title: "未登录",
-				icon: 'none'
-			})
-		}
-	})
-}
-
-/**
- * 404 未找到页面错误
- */
-function error404page() {
-	uni,
-	uni.showToast({
-		title: "服务器资源错误 - 404",
-		icon: 'none'
-	})
-}
-
-
-
-// 封装的统一 request 请求
+// 封装的统一 request 请求 
 const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/json') => {
 	// 如果用户没有token信息（则表示）未登录状态，做一个跳转
 	var baseToken = uni.getStorageSync('token');
 	if (baseToken == null || baseToken == "") {
-		this.redirectToLogin();
+		redirectToLogin();
 		throw new Error('无法操作 - 因为没有登录'); //传入message
 	}
 
@@ -77,10 +39,10 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 				var code = res.statusCode;
 				switch (code) {
 					case 401:
-						this.redirectToLogin();
+						redirectToLogin();
 						break;
 					case 404:
-						this.error404page();
+						error404page();
 						break;
 					default:
 						resolve(res);
@@ -93,6 +55,45 @@ const sendRequest = (url, method = 'GET', data = {}, contentType = 'application/
 		})
 	})
 }
+
+
+
+/**
+ * 跳转到登陆页面
+ */
+function redirectToLogin() {
+	// 跳转到登录页面
+	uni.showModal({
+		title: '登录提示',
+		content: '身份已过期，请重新登录后再来操作！',
+		success: ress => {
+			if (ress.confirm) {
+				uni.redirectTo({
+					url: redirectPages,
+				})
+			}
+		},
+		fail(err) {
+			uni,
+			uni.showToast({
+				title: "未登录",
+				icon: 'none'
+			})
+		}
+	})
+}
+
+/**
+ * 404 未找到页面错误
+ */
+function error404page() {
+	uni.showToast({
+		title: "服务器资源错误 - 404",
+		icon: 'none',
+		duration: 2000,
+	})
+}
+
 
 export default {
 	sendRequest: sendRequest

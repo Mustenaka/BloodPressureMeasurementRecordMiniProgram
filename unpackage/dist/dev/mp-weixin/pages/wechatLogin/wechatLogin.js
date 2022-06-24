@@ -29,7 +29,7 @@ const _sfc_main = {
               console.log("\u7528\u6237code\u83B7\u53D6:" + JSON.stringify(res2));
               console.log("UserInfo:", JSON.stringify(userInfo));
               common_vendor.index.request({
-                url: "http://1.117.222.119/wxlogin",
+                url: "https://www.lyhxxcx.cn/wxlogin",
                 method: "POST",
                 header: {
                   "content-type": "application/json"
@@ -53,13 +53,15 @@ const _sfc_main = {
                     common_vendor.index.hideLoading();
                     common_vendor.index.showToast({
                       title: "\u767B\u9646\u5931\u8D25-\u8BF7\u5148\u6CE8\u518C",
-                      icon: "none"
+                      icon: "none",
+                      duration: 2e3
                     });
                   } else {
                     common_vendor.index.hideLoading();
                     common_vendor.index.showToast({
                       title: "\u767B\u9646\u5931\u8D25-\u53EF\u80FD\u662F\u7F51\u7EDC\u95EE\u9898",
-                      icon: "none"
+                      icon: "none",
+                      duration: 2e3
                     });
                   }
                 },
@@ -67,7 +69,8 @@ const _sfc_main = {
                   common_vendor.index.hideLoading();
                   common_vendor.index.showToast({
                     title: "\u767B\u9646\u5931\u8D25",
-                    icon: "none"
+                    icon: "none",
+                    duration: 2e3
                   });
                 }
               });
@@ -92,7 +95,7 @@ const _sfc_main = {
               console.log("\u7528\u6237code\u83B7\u53D6\u6210\u529F:" + JSON.stringify(res2));
               console.log("UserInfo:", JSON.stringify(userInfo));
               common_vendor.index.request({
-                url: "http://1.117.222.119/wxregister",
+                url: "https://www.lyhxxcx.cn/wxregister",
                 method: "POST",
                 header: {
                   "content-type": "application/json"

@@ -61,11 +61,10 @@
 
 								// step3: 向后端服务器发送请求
 								uni.request({
-									url: 'http://1.117.222.119/wxlogin',
+									url: 'https://www.lyhxxcx.cn/wxlogin',
 									method: 'POST',
 									header: {
 										"content-type": "application/json",
-										// "source": "fromApp"
 									},
 									data: {
 										"code": code
@@ -101,14 +100,16 @@
 
 											uni, uni.showToast({
 												title: "登陆失败-请先注册",
-												icon: 'none'
+												icon: 'none',
+												duration: 2000,
 											})
 										} else {
 											// 登陆失败
 											uni.hideLoading();
 											uni, uni.showToast({
 												title: "登陆失败-可能是网络问题",
-												icon: 'none'
+												icon: 'none',
+												duration: 2000,
 											})
 										}
 									},
@@ -116,7 +117,8 @@
 										uni.hideLoading()
 										uni, uni.showToast({
 											title: "登陆失败",
-											icon: 'none'
+											icon: 'none',
+											duration: 2000,
 										})
 									},
 								})
@@ -150,7 +152,7 @@
 
 								// 登陆失败，没有该用户 - 执行自动注册程序
 								uni.request({
-									url: 'http://1.117.222.119/wxregister',
+									url: 'https://www.lyhxxcx.cn/wxregister',
 									method: 'POST',
 									header: {
 										"content-type": "application/json",
