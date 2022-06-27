@@ -10,10 +10,13 @@
 			<view class="item" v-for="(item,index) in TreatmentArray">
 				<text>我的治疗方案 {{index+1}} - </text>
 				<text>{{item.date}}</text>
-				<uni-section title="我的历史治疗方案" type="line" padding>
-					<uni-easyinput disabled type="textarea" autoHeight v-model="item.value" placeholder="请输入内容">
+				<view class="item-block">
+					<text>{{item.value}}</text>
+				</view>
+				<!-- <uni-section title="我的历史治疗方案" type="line" padding>
+					<uni-easyinput type="textarea" autoHeight v-model="item.value" placeholder="请输入内容">
 					</uni-easyinput>
-				</uni-section>
+				</uni-section> -->
 			</view>
 
 			<view class="item">
@@ -146,7 +149,12 @@
 
 			font-weight: 550;
 			font-size: 80%;
-
+		}
+		
+		.item-block{
+			border: 1rpx solid #6FAD8F;
+			// border-style: solid;
+			border-radius: 10rpx;
 		}
 
 		.slogan {

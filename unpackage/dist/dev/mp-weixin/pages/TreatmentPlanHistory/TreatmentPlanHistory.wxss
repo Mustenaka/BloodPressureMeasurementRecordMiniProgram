@@ -67,6 +67,10 @@
   font-weight: 550;
   font-size: 80%;
 }
+.home .item-block {
+  border: 1rpx solid #6FAD8F;
+  border-radius: 10rpx;
+}
 .home .slogan {
   font-size: 9pt;
 }

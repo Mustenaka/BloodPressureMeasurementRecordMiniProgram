@@ -3,9 +3,9 @@ var common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
     return {
-      placeholderStyle: "color:#2979FF;font-size:14px",
+      placeholderStyle: "color:#5BBD8C;font-size:14px",
       styles: {
-        color: "#2979FF",
+        color: "#000000",
         borderColor: "#2979FF"
       },
       patientInfo: {

@@ -185,9 +185,9 @@
 	export default {
 		data() {
 			return {
-				placeholderStyle: "color:#2979FF;font-size:14px",
+				placeholderStyle: "color:#5BBD8C;font-size:14px",
 				styles: {
-					color: '#2979FF',
+					color: '#000000',
 					borderColor: '#2979FF'
 				},
 				// 患者详细信息
