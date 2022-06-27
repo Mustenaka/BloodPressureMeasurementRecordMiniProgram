@@ -35,7 +35,8 @@
 			<view class="item">
 				<text>电话号码</text>
 				<uni-section title="电话号码" type="line" padding>
-					<uni-easyinput errorMessage v-model="patientInfo.Tel" focus placeholder="请输入内容">
+					<uni-easyinput :styles="styles" :placeholderStyle="placeholderStyle" v-model="patientInfo.Tel"
+						placeholder="请输入内容">
 					</uni-easyinput>
 				</uni-section>
 			</view>
@@ -56,7 +57,8 @@
 			<view class="item">
 				<text>既往病史</text>
 				<uni-section title="既往病史" type="line" padding>
-					<uni-easyinput errorMessage v-model="patientInfo.Anamnesis" focus placeholder="请输入内容">
+					<uni-easyinput :styles="styles" :placeholderStyle="placeholderStyle" v-model="patientInfo.Anamnesis"
+						placeholder="请输入内容">
 					</uni-easyinput>
 				</uni-section>
 			</view>
@@ -147,7 +149,8 @@
 			<view class="item">
 				<text>降压方案</text>
 				<uni-section title="降压方案" type="line" padding>
-					<uni-easyinput errorMessage v-model="patientInfo.AntihypertensivePlan" focus placeholder="请输入内容">
+					<uni-easyinput :styles="styles" :placeholderStyle="placeholderStyle"
+						v-model="patientInfo.AntihypertensivePlan" placeholder="请输入内容">
 					</uni-easyinput>
 				</uni-section>
 			</view>
@@ -164,7 +167,8 @@
 			<view class="item">
 				<text>非药物控制手段</text>
 				<uni-section title="非药物控制手段" padding>
-					<uni-easyinput errorMessage v-model="patientInfo.NondrugControlPlan" focus placeholder="请输入内容">
+					<uni-easyinput :styles="styles" :placeholderStyle="placeholderStyle"
+						v-model="patientInfo.NondrugControlPlan" placeholder="请输入内容">
 					</uni-easyinput>
 				</uni-section>
 			</view>

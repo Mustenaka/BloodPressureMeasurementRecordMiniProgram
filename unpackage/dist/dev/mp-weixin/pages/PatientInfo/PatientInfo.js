@@ -242,8 +242,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     i: common_vendor.o(($event) => $data.patientInfo.Tel = $event),
     j: common_vendor.p({
-      errorMessage: true,
-      focus: true,
+      styles: $data.styles,
+      placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.Tel
     }),
@@ -272,8 +272,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     r: common_vendor.o(($event) => $data.patientInfo.Anamnesis = $event),
     s: common_vendor.p({
-      errorMessage: true,
-      focus: true,
+      styles: $data.styles,
+      placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.Anamnesis
     }),
@@ -402,8 +402,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     af: common_vendor.o(($event) => $data.patientInfo.AntihypertensivePlan = $event),
     ag: common_vendor.p({
-      errorMessage: true,
-      focus: true,
+      styles: $data.styles,
+      placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.AntihypertensivePlan
     }),
@@ -423,8 +423,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     }),
     al: common_vendor.o(($event) => $data.patientInfo.NondrugControlPlan = $event),
     am: common_vendor.p({
-      errorMessage: true,
-      focus: true,
+      styles: $data.styles,
+      placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.NondrugControlPlan
     }),
