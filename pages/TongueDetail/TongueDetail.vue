@@ -12,18 +12,21 @@
 					<text>记录{{index+1}} </text>
 					<text>{{value.create_at}}</text>
 				</view>
-				<text>舌像</text>
-				<view class="detail_text">
-					<text>{{value.tongue}}</text>
+				<view class="item-border">
+					<text>舌像:</text>
+					<view class=".detail-text">
+						<text>{{value.tongue}}</text>
+					</view>
+					<text>舌苔:</text>
+					<view class=".detail-text">
+						<text>{{value.tongue_coating}}</text>
+					</view>
+					<text>脉象:</text>
+					<view class=".detail-text">
+						<text>{{value.pulse}}</text>
+					</view>
 				</view>
-				<text>舌苔</text>
-				<view class="detail_text">
-					<text>{{value.tongue_coating}}</text>
-				</view>
-				<text>脉象</text>
-				<view class="detail_text">
-					<text>{{value.pulse}}</text>
-				</view>
+
 			</view>
 
 			<view class="item">
@@ -131,17 +134,23 @@
 			font-weight: 550;
 			font-size: 110%;
 		}
+		
+		.item-border{
+			border: 2rpx solid #6FAD8F;
+			border-radius: 5rpx;
+		}
 
 		.item_detail {
 			width: 98%;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-
-			.detail_text {
-				font-size: 90%;
-				font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-			}
+		}
+		
+		.detail-text {
+			font-size: 90%;
+			font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+			text-indent: 2em;
 		}
 
 		.slogan {
