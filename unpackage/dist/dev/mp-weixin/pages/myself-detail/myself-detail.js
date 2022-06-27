@@ -15,7 +15,7 @@ const _sfc_main = {
   },
   methods: {
     getData() {
-      const url = "http://1.117.222.119/v1/user";
+      const url = "v1/user";
       this.$http.sendRequest(url, "GET", {}).then((res) => {
         console.log(res);
         var data = res.data.data;

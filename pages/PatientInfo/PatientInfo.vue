@@ -1,5 +1,5 @@
 <template>
-<!-- 		2022.6.11留，经过整理，证明这个模块是当初通宵的时候写的臭代码，为了快速实现功能，耦合性过大，而且信息超级多也没有注意表单的使用，真的很难受。
+	<!-- 		2022.6.11留，经过整理，证明这个模块是当初通宵的时候写的臭代码，为了快速实现功能，耦合性过大，而且信息超级多也没有注意表单的使用，真的很难受。
 		以后要更新的话，这个部分不要尝试修改，直接抛弃，反正后端的接口都是OK的。 -->
 	<view class="home">
 		<!-- 首部轮播图 -->
@@ -13,7 +13,8 @@
 			<view class="item">
 				<text>患者姓名</text>
 				<uni-section title="患者姓名" type="line" padding>
-					<uni-easyinput errorMessage v-model="patientInfo.RealName" focus placeholder="请输入内容">
+					<uni-easyinput :styles="styles" :placeholderStyle="placeholderStyle" v-model="patientInfo.RealName"
+						placeholder="请输入内容">
 					</uni-easyinput>
 				</uni-section>
 			</view>
@@ -180,6 +181,11 @@
 	export default {
 		data() {
 			return {
+				placeholderStyle: "color:#2979FF;font-size:14px",
+				styles: {
+					color: '#2979FF',
+					borderColor: '#2979FF'
+				},
 				// 患者详细信息
 				patientInfo: {
 					RealName: '', // 患者姓名
@@ -311,7 +317,7 @@
 
 			// 获取数据
 			getData() {
-				const url = 'http://1.117.222.119/v1/user/patientinfo';
+				const url = 'v1/user/patientinfo';
 				this.$http.sendRequest(url, 'GET', {})
 					.then(
 						res => {

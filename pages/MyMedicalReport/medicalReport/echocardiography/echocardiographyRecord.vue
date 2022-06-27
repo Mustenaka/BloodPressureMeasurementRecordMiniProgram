@@ -76,7 +76,7 @@
 
 			submit() {
 				console.log('数据' + this.record.data)
-				this.$http.sendRequest('http://1.117.222.119/v1/user/mrechocardiographys', 'POST', {
+				this.$http.sendRequest('v1/user/mrechocardiographys', 'POST', {
 					"ef": this.record.ef,
 					"lvidd": this.record.lvidd,
 					"lvids": this.record.lvids,

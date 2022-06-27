@@ -71,7 +71,7 @@
 
 		methods: {
 			getData() {
-				const url = 'http://1.117.222.119/v1/user';
+				const url = 'v1/user';
 				this.$http.sendRequest(url, 'GET', {}).then(
 					res => {
 						//成功回调

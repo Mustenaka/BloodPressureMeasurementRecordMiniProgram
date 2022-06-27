@@ -34,7 +34,7 @@
 
 		methods: {
 			submit() {
-				this.$http.sendRequest('http://1.117.222.119/v1/user/treatmentplan', 'POST', {
+				this.$http.sendRequest('v1/user/treatmentplan', 'POST', {
 					"plan": this.value,
 					"note": "无"
 				}).then(res => {

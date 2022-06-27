@@ -3,6 +3,11 @@ var common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
     return {
+      placeholderStyle: "color:#2979FF;font-size:14px",
+      styles: {
+        color: "#2979FF",
+        borderColor: "#2979FF"
+      },
       patientInfo: {
         RealName: "",
         Sex: "",
@@ -112,7 +117,7 @@ const _sfc_main = {
       console.log("Test button:" + this.patientInfo.SmokingHistory);
     },
     getData() {
-      const url = "http://1.117.222.119/v1/user/patientinfo";
+      const url = "v1/user/patientinfo";
       this.$http.sendRequest(url, "GET", {}).then((res) => {
         console.log(res);
         var data = res.data.data;
@@ -211,8 +216,8 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.o(($event) => $data.patientInfo.RealName = $event),
     b: common_vendor.p({
-      errorMessage: true,
-      focus: true,
+      styles: $data.styles,
+      placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.RealName
     }),

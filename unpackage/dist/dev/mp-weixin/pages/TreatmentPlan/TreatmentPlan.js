@@ -8,7 +8,7 @@ const _sfc_main = {
   },
   methods: {
     submit() {
-      this.$http.sendRequest("http://1.117.222.119/v1/user/treatmentplan", "POST", {
+      this.$http.sendRequest("v1/user/treatmentplan", "POST", {
         "plan": this.value,
         "note": "\u65E0"
       }).then((res) => {

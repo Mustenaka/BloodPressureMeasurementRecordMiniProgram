@@ -11,7 +11,7 @@ const _sfc_main = {
   },
   methods: {
     getData() {
-      const url = "http://1.117.222.119/v1/user/mrechocardiographys?limit_count=0";
+      const url = "v1/user/mrechocardiographys?limit_count=0";
       this.$http.sendRequest(url, "GET", {}).then((res) => {
         console.log(res);
         var Array = res.data.data;

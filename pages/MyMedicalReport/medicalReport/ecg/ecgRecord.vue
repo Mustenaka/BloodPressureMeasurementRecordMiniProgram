@@ -53,7 +53,7 @@
 
 			submit() {
 				console.log('数据' + this.record.data)
-				this.$http.sendRequest('http://1.117.222.119/v1/user/mrecg', 'POST', {
+				this.$http.sendRequest('v1/user/mrecg', 'POST', {
 					"data": this.record.data,
 				}).then(res => {
 					//成功回调

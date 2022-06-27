@@ -15,7 +15,7 @@ const _sfc_main = {
     },
     submit() {
       console.log("\u6570\u636E" + this.record.data);
-      this.$http.sendRequest("http://1.117.222.119/v1/user/ticreatinine", "POST", {
+      this.$http.sendRequest("v1/user/ticreatinine", "POST", {
         "data": this.record.data,
         "create_at": this.record.createAt
       }).then((res) => {

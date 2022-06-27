@@ -24,7 +24,7 @@
 			<view class="item">
 				<text>自定义天数</text>
 				<uni-section :title="'自定义天数: '+ daysCount" type="line" padding>
-					<uni-number-box v-model="daysCount" :min="0" :max="360" />
+					<uni-number-box :value="daysCount" @change="valueChange" :min="0" :max="360" />
 				</uni-section>
 			</view>
 		</view>
@@ -99,6 +99,9 @@
 		},
 
 		methods: {
+			valueChange(value) {
+				this.daysCount = value;
+			},
 			submit7days() {
 				this.limit_days = 7;
 				this.submit();
@@ -113,7 +116,7 @@
 			},
 
 			submit() {
-				const url = 'http://1.117.222.119/v1/user/bprecord?limit_days=' + this.limit_days
+				const url = 'v1/user/bprecord?limit_days=' + this.limit_days
 				console.log(this.limit_days)
 				this.$http.sendRequest(url, 'GET', {})
 					.then(

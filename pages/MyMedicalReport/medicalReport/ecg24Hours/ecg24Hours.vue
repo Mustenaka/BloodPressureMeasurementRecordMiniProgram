@@ -42,7 +42,7 @@
 
 		methods: {
 			getData() {
-				const url = 'http://1.117.222.119/v1/user/mr24hoursecg?limit_count=0'
+				const url = 'v1/user/mr24hoursecg?limit_count=0'
 				this.$http.sendRequest(url, 'GET', {})
 					.then(
 						res => {

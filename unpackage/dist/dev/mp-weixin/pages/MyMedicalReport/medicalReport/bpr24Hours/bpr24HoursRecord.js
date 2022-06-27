@@ -36,7 +36,7 @@ const _sfc_main = {
       this.record.max_low = value;
     },
     submit() {
-      this.$http.sendRequest("http://1.117.222.119/v1/user/mr24hoursbpr", "POST", {
+      this.$http.sendRequest("v1/user/mr24hoursbpr", "POST", {
         "day_high": this.record.day_high,
         "day_low": this.record.day_low,
         "night_high": this.record.night_high,

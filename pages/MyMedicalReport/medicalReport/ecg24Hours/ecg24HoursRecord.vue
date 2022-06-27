@@ -62,7 +62,7 @@
 
 			submit() {
 				console.log('数据' + this.record.data)
-				this.$http.sendRequest('http://1.117.222.119/v1/user/mr24hoursecg', 'POST', {
+				this.$http.sendRequest('v1/user/mr24hoursecg', 'POST', {
 					"data": this.record.data,
 					"average": this.record.average,
 				}).then(res => {

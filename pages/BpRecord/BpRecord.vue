@@ -75,7 +75,7 @@
 					return;
 				}
 
-				this.$http.sendRequest('http://1.117.222.119/v1/user/bprecord', 'POST', {
+				this.$http.sendRequest('v1/user/bprecord', 'POST', {
 					"record_date_time": this.bpRecord.record_date_time,
 					"low": this.bpRecord.low,
 					"high": this.bpRecord.high,

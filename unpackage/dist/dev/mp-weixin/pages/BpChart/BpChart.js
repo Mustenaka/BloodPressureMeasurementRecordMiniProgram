@@ -71,6 +71,9 @@ const _sfc_main = {
     this.submit();
   },
   methods: {
+    valueChange(value) {
+      this.daysCount = value;
+    },
     submit7days() {
       this.limit_days = 7;
       this.submit();
@@ -84,7 +87,7 @@ const _sfc_main = {
       this.submit();
     },
     submit() {
-      const url = "http://1.117.222.119/v1/user/bprecord?limit_days=" + this.limit_days;
+      const url = "v1/user/bprecord?limit_days=" + this.limit_days;
       console.log(this.limit_days);
       this.$http.sendRequest(url, "GET", {}).then((res) => {
         console.log(res);
@@ -141,11 +144,11 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     b: common_vendor.o((...args) => $options.submit7days && $options.submit7days(...args)),
     c: common_vendor.o((...args) => $options.submit30days && $options.submit30days(...args)),
     d: common_vendor.o((...args) => $options.submitCustomizedays && $options.submitCustomizedays(...args)),
-    e: common_vendor.o(($event) => $data.daysCount = $event),
+    e: common_vendor.o($options.valueChange),
     f: common_vendor.p({
+      value: $data.daysCount,
       min: 0,
-      max: 360,
-      modelValue: $data.daysCount
+      max: 360
     }),
     g: common_vendor.p({
       title: "\u81EA\u5B9A\u4E49\u5929\u6570: " + $data.daysCount,
