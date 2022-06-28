@@ -149,7 +149,7 @@ const _sfc_main = {
       });
     },
     submit() {
-      const url = "http://1.117.222.119/v1/user/wxpatientinfo";
+      const url = "v1/user/wxpatientinfo";
       var submitData = {
         "real_name": this.patientInfo.RealName,
         "sex": this.patientInfo.Sex,
@@ -240,199 +240,187 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "date",
       modelValue: $data.patientInfo.Birthday
     }),
-    i: common_vendor.o(($event) => $data.patientInfo.Tel = $event),
+    i: common_vendor.o(($event) => $data.patientInfo.IsMarried = $event),
     j: common_vendor.p({
-      styles: $data.styles,
-      placeholderStyle: $data.placeholderStyle,
-      placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
-      modelValue: $data.patientInfo.Tel
-    }),
-    k: common_vendor.p({
-      title: "\u7535\u8BDD\u53F7\u7801",
-      type: "line",
-      padding: true
-    }),
-    l: common_vendor.o(($event) => $data.patientInfo.IsMarried = $event),
-    m: common_vendor.p({
       localdata: $data.marriage,
       modelValue: $data.patientInfo.IsMarried
     }),
-    n: common_vendor.p({
+    k: common_vendor.p({
       title: "\u5355\u9009",
       type: "line"
     }),
-    o: common_vendor.o($options.changeValue_HbpYears),
-    p: common_vendor.p({
+    l: common_vendor.o($options.changeValue_HbpYears),
+    m: common_vendor.p({
       value: $data.patientInfo.HbpYears
     }),
-    q: common_vendor.p({
+    n: common_vendor.p({
       title: _ctx.\u9AD8\u8840\u538B\u5E74\u4EFD,
       type: "line",
       padding: true
     }),
-    r: common_vendor.o(($event) => $data.patientInfo.Anamnesis = $event),
-    s: common_vendor.p({
+    o: common_vendor.o(($event) => $data.patientInfo.Anamnesis = $event),
+    p: common_vendor.p({
       styles: $data.styles,
       placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.Anamnesis
     }),
-    t: common_vendor.p({
+    q: common_vendor.p({
       title: "\u65E2\u5F80\u75C5\u53F2",
       type: "line",
       padding: true
     }),
-    v: common_vendor.o(($event) => $data.patientInfo.IsSmoking = $event),
-    w: common_vendor.p({
+    r: common_vendor.o(($event) => $data.patientInfo.IsSmoking = $event),
+    s: common_vendor.p({
       localdata: $data.isSmoke,
       modelValue: $data.patientInfo.IsSmoking
     }),
-    x: common_vendor.p({
+    t: common_vendor.p({
       title: "\u5355\u9009",
       type: "line"
     }),
-    y: common_vendor.o($options.changeValue_SmokingHistory),
-    z: common_vendor.p({
+    v: common_vendor.o($options.changeValue_SmokingHistory),
+    w: common_vendor.p({
       value: $data.patientInfo.SmokingHistory
     }),
-    A: common_vendor.p({
+    x: common_vendor.p({
       title: "\u5438\u70DF\u53F2\uFF08\u5E74\u4EFD\uFF09",
       type: "line",
       padding: true
     }),
-    B: common_vendor.o($options.changeValue_SmokingDaily),
-    C: common_vendor.p({
+    y: common_vendor.o($options.changeValue_SmokingDaily),
+    z: common_vendor.p({
       value: $data.patientInfo.SmokingDaily
     }),
-    D: common_vendor.p({
+    A: common_vendor.p({
       title: "\u65E5\u5438\u70DF\u6570",
       type: "line",
       padding: true
     }),
-    E: common_vendor.o(($event) => $data.patientInfo.IsDrink = $event),
-    F: common_vendor.p({
+    B: common_vendor.o(($event) => $data.patientInfo.IsDrink = $event),
+    C: common_vendor.p({
       localdata: $data.isDrink,
       modelValue: $data.patientInfo.IsDrink
     }),
-    G: common_vendor.p({
+    D: common_vendor.p({
       title: "\u662F\u5426\u996E\u9152",
       type: "line"
     }),
-    H: common_vendor.o($options.changeValue_DrinkHistory),
-    I: common_vendor.p({
+    E: common_vendor.o($options.changeValue_DrinkHistory),
+    F: common_vendor.p({
       value: $data.patientInfo.DrinkHistory
     }),
-    J: common_vendor.p({
+    G: common_vendor.p({
       title: "\u996E\u9152\u53F2\uFF08\u5E74\u4EFD\uFF09",
       type: "line",
       padding: true
     }),
-    K: common_vendor.o($options.changeValue_DrinkDaily),
-    L: common_vendor.p({
+    H: common_vendor.o($options.changeValue_DrinkDaily),
+    I: common_vendor.p({
       value: $data.patientInfo.DrinkDaily
     }),
-    M: common_vendor.p({
+    J: common_vendor.p({
       title: "\u6BCF\u65E5\u996E\u9152\u91CF",
       type: "line",
       padding: true
     }),
-    N: common_vendor.o($options.changeValue_PatientHeight),
-    O: common_vendor.p({
+    K: common_vendor.o($options.changeValue_PatientHeight),
+    L: common_vendor.p({
       value: $data.patientInfo.PatientHeight,
       min: 0,
       max: 1e3
     }),
-    P: common_vendor.p({
+    M: common_vendor.p({
       title: "\u8EAB\u9AD8",
       type: "line",
       padding: true
     }),
-    Q: common_vendor.o($options.changeValue_PatientWeight),
-    R: common_vendor.p({
+    N: common_vendor.o($options.changeValue_PatientWeight),
+    O: common_vendor.p({
       value: $data.patientInfo.PatientWeight,
       min: 0,
       max: 1e3
     }),
-    S: common_vendor.p({
+    P: common_vendor.p({
       title: "\u4F53\u91CD",
       type: "line",
       padding: true
     }),
-    T: common_vendor.o($options.changeValue_PatientWaistCircumference),
-    U: common_vendor.p({
+    Q: common_vendor.o($options.changeValue_PatientWaistCircumference),
+    R: common_vendor.p({
       value: $data.patientInfo.PatientWaistCircumference,
       min: 0,
       max: 1e3
     }),
-    V: common_vendor.p({
+    S: common_vendor.p({
       title: "\u8170\u56F4",
       type: "line",
       padding: true
     }),
-    W: common_vendor.o($options.changeValue_PatientChestCircumference),
-    X: common_vendor.p({
+    T: common_vendor.o($options.changeValue_PatientChestCircumference),
+    U: common_vendor.p({
       value: $data.patientInfo.PatientChestCircumference,
       min: 0,
       max: 1e3
     }),
-    Y: common_vendor.p({
+    V: common_vendor.p({
       title: "\u80F8\u56F4",
       type: "line",
       padding: true
     }),
-    Z: common_vendor.o($options.changeValue_PatientHipCircumference),
-    aa: common_vendor.p({
+    W: common_vendor.o($options.changeValue_PatientHipCircumference),
+    X: common_vendor.p({
       value: $data.patientInfo.PatientHipCircumference,
       min: 0,
       max: 1e3
     }),
-    ab: common_vendor.p({
+    Y: common_vendor.p({
       title: "\u81C0\u56F4",
       type: "line",
       padding: true
     }),
-    ac: common_vendor.o(($event) => $data.patientInfo.IsTakeChineseMedicine = $event),
-    ad: common_vendor.p({
+    Z: common_vendor.o(($event) => $data.patientInfo.IsTakeChineseMedicine = $event),
+    aa: common_vendor.p({
       localdata: $data.isUseChineseMedical,
       modelValue: $data.patientInfo.IsTakeChineseMedicine
     }),
-    ae: common_vendor.p({
+    ab: common_vendor.p({
       title: "\u662F\u5426\u670D\u7528\u4E2D\u836F",
       type: "line"
     }),
-    af: common_vendor.o(($event) => $data.patientInfo.AntihypertensivePlan = $event),
-    ag: common_vendor.p({
+    ac: common_vendor.o(($event) => $data.patientInfo.AntihypertensivePlan = $event),
+    ad: common_vendor.p({
       styles: $data.styles,
       placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.AntihypertensivePlan
     }),
-    ah: common_vendor.p({
+    ae: common_vendor.p({
       title: "\u964D\u538B\u65B9\u6848",
       type: "line",
       padding: true
     }),
-    ai: common_vendor.o(($event) => $data.patientInfo.IsNondrugControlPlan = $event),
-    aj: common_vendor.p({
+    af: common_vendor.o(($event) => $data.patientInfo.IsNondrugControlPlan = $event),
+    ag: common_vendor.p({
       localdata: $data.isUseNondrugTreatments,
       modelValue: $data.patientInfo.IsNondrugControlPlan
     }),
-    ak: common_vendor.p({
+    ah: common_vendor.p({
       title: "\u662F\u5426\u975E\u836F\u7269\u63A7\u5236\u624B\u6BB5",
       type: "line"
     }),
-    al: common_vendor.o(($event) => $data.patientInfo.NondrugControlPlan = $event),
-    am: common_vendor.p({
+    ai: common_vendor.o(($event) => $data.patientInfo.NondrugControlPlan = $event),
+    aj: common_vendor.p({
       styles: $data.styles,
       placeholderStyle: $data.placeholderStyle,
       placeholder: "\u8BF7\u8F93\u5165\u5185\u5BB9",
       modelValue: $data.patientInfo.NondrugControlPlan
     }),
-    an: common_vendor.p({
+    ak: common_vendor.p({
       title: "\u975E\u836F\u7269\u63A7\u5236\u624B\u6BB5",
       padding: true
     }),
-    ao: common_vendor.o((...args) => $options.submit && $options.submit(...args))
+    al: common_vendor.o((...args) => $options.submit && $options.submit(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/PatientInfo/PatientInfo.vue"]]);

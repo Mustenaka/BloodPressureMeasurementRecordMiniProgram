@@ -4,12 +4,15 @@
 	<view class="home">
 		<!-- 首部轮播图 -->
 		<view class="header">
-			<text class="header-text">血压录入</text>
+			<text class="header-text">患者信息</text>
 		</view>
 
 		<!-- 中部选择框 -->
 		<view class="box">
 			<!-- 中部选择框 -->
+			<view class="item">
+				<text>医院需要记录您的基本患者信息，以供进行药物治疗数据分析，并有助于医生对症下药</text>
+			</view>
 			<view class="item">
 				<text>患者姓名</text>
 				<uni-section title="患者姓名" type="line" padding>
@@ -32,14 +35,14 @@
 					<uni-datetime-picker type="date" v-model="patientInfo.Birthday" />
 				</view>
 			</view>
-			<view class="item">
+<!-- 			<view class="item">
 				<text>电话号码</text>
 				<uni-section title="电话号码" type="line" padding>
 					<uni-easyinput :styles="styles" :placeholderStyle="placeholderStyle" v-model="patientInfo.Tel"
 						placeholder="请输入内容">
 					</uni-easyinput>
 				</uni-section>
-			</view>
+			</view> -->
 			<view class="item">
 				<text>婚否</text>
 				<uni-section title="单选" type="line">
@@ -362,7 +365,7 @@
 
 			submit() {
 				// 请求地址
-				const url = 'http://1.117.222.119/v1/user/wxpatientinfo';
+				const url = 'v1/user/wxpatientinfo';
 				// 上传数据
 				var submitData = {
 					"real_name": this.patientInfo.RealName,

@@ -2,7 +2,5 @@
   "navigationBarTitleText": "历史治疗方案",
   "enablePullDownRefresh": false,
   "disableScroll": false,
-  "usingComponents": {
-    "uni-easyinput": "../../uni_modules/uni-easyinput/components/uni-easyinput/uni-easyinput"
-  }
+  "usingComponents": {}
 }

@@ -2,12 +2,15 @@
 	<view class="home">
 		<!-- 首部轮播图 -->
 		<view class="header">
-			<text class="header-text">血压录入</text>
+			<text class="header-text">推送设置</text>
 		</view>
 
 		<!-- 中部选择框 -->
 		<view class="box">
 			<!-- 中部选择框 -->
+			<view class="item">
+				<text>小程序记录到您为在规定的时间内上传血压记录，会自动进行推送提醒（未实装），可以在此处填写推送的方式</text>
+			</view>
 			<view class="item">
 				<text>具体测量方案</text>
 				<uni-section title="默认" subTitle="使用 focus 属性自动获取输入框焦点" type="line" padding>
