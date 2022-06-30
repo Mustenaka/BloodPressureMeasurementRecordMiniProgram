@@ -66,6 +66,7 @@ const _sfc_main = {
                   }
                 },
                 fail: (err) => {
+                  console.log("\u8BBF\u95EE\u540E\u7AEF\u5730\u5740\u9519\u8BEF:" + err.errMsg);
                   common_vendor.index.hideLoading();
                   common_vendor.index.showToast({
                     title: "\u767B\u9646\u5931\u8D25",
@@ -115,6 +116,7 @@ const _sfc_main = {
                   });
                 },
                 fail: (err) => {
+                  console.log("\u6CE8\u518C \u540E\u7AEF\u9519\u8BEF:" + err.errMsg);
                   common_vendor.index.hideLoading();
                   common_vendor.index.showToast({
                     title: "\u6CE8\u518C\u5931\u8D25",

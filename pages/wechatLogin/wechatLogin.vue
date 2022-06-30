@@ -114,6 +114,7 @@
 										}
 									},
 									fail: (err) => {
+										console.log("访问后端地址错误:" + err.errMsg);
 										uni.hideLoading()
 										uni, uni.showToast({
 											title: "登陆失败",
@@ -179,6 +180,7 @@
 										})
 									},
 									fail: (err) => {
+										console.log("注册 后端错误:" + err.errMsg);
 										uni.hideLoading()
 										uni, uni.showToast({
 											title: "注册失败",

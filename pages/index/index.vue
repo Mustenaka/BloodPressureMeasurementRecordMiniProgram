@@ -46,6 +46,7 @@
 		<!-- 尾部空白框，计划留作公司信息展示框 -->
 		<view class="box" style="margin-top: 30px;">
 			<text class="slogan">龙医护心小程序 - 守护您的健康</text>
+			<text class="slogan">{{version}}</text>
 		</view>
 	</view>
 </template>
@@ -54,6 +55,7 @@
 	export default {
 		data() {
 			return {
+				version: "v0.1.7",
 				// 轮播图列表
 				swiperList: [
 					'../../static/swiper/swiper1.png',
