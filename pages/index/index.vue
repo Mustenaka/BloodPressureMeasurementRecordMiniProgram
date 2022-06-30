@@ -46,7 +46,7 @@
 		<!-- 尾部空白框，计划留作公司信息展示框 -->
 		<view class="box" style="margin-top: 30px;">
 			<text class="slogan">龙医护心小程序 - 守护您的健康</text>
-			<text class="slogan">{{version}}</text>
+			<text class="slogan_mini">{{version}}</text>
 		</view>
 	</view>
 </template>
@@ -185,6 +185,9 @@
 
 		.slogan {
 			font-size: 9pt;
+		}
+		.slogan_mini {
+			font-size: 6pt;
 		}
 	}
 </style>
