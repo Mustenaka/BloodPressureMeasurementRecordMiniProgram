@@ -49,7 +49,9 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       };
     }),
     b: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
-    c: common_vendor.o((...args) => $options.toMyselfSettingPush && $options.toMyselfSettingPush(...args))
+    c: common_vendor.o((...args) => $options.toPatientInfo && $options.toPatientInfo(...args)),
+    d: common_vendor.o((...args) => $options.toMyselfSettingPush && $options.toMyselfSettingPush(...args)),
+    e: common_vendor.o((...args) => $options.toMyselfSettingPush && $options.toMyselfSettingPush(...args))
   };
 }
 var MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/work/Go/BloodPressureMeasurementRecordMiniProgram/pages/myself/myself.vue"]]);

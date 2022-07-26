@@ -151,9 +151,9 @@ const _sfc_main = {
     }
   },
   created() {
-    if (!(common_vendor.Rt.config && common_vendor.Rt.config.provider)) {
+    if (!(common_vendor.tn.config && common_vendor.tn.config.provider)) {
       this.noSpace = true;
-      common_vendor.Rt.chooseAndUploadFile = uni_modules_uniFilePicker_components_uniFilePicker_chooseAndUploadFile.chooseAndUploadFile;
+      common_vendor.tn.chooseAndUploadFile = uni_modules_uniFilePicker_components_uniFilePicker_chooseAndUploadFile.chooseAndUploadFile;
     }
     this.form = this.getForm("uniForms");
     this.formItem = this.getForm("uniFormsItem");
@@ -240,7 +240,7 @@ const _sfc_main = {
     },
     chooseFiles() {
       const _extname = uni_modules_uniFilePicker_components_uniFilePicker_utils.get_extname(this.fileExtname);
-      common_vendor.Rt.chooseAndUploadFile({
+      common_vendor.tn.chooseAndUploadFile({
         type: this.fileMediatype,
         compressed: false,
         sizeType: this.sizeType,
@@ -415,7 +415,7 @@ const _sfc_main = {
       fileList = {
         fileList: [].concat(fileList)
       };
-      const urls = await common_vendor.Rt.getTempFileURL(fileList);
+      const urls = await common_vendor.tn.getTempFileURL(fileList);
       return urls.fileList[0].tempFileURL || "";
     },
     getForm(name = "uniForms") {

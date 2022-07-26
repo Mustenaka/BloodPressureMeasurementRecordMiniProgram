@@ -14,10 +14,10 @@
 <!-- 			<view class="item">
 				<text @click="toMyselfDetail">我的账户</text>
 			</view> -->
-			<view class="item">
+			<view class="item" @click="toPatientInfo">
 				<text @click="toPatientInfo">患者信息</text>
 			</view>
-			<view class="item">
+			<view class="item" @click="toMyselfSettingPush">
 				<text @click="toMyselfSettingPush">推送设置</text>
 			</view>
 		</view>

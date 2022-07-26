@@ -67,3 +67,6 @@
 .home .slogan {
   font-size: 9pt;
 }
+.home .slogan_mini {
+  font-size: 6pt;
+}
