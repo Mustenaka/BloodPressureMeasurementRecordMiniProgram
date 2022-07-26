@@ -314,7 +314,7 @@
 				this.patientInfo.PatientChestCircumference = value;
 			},
 			changeValue_PatientHipCircumference(value) {
-				this.patientInfo.DrinkDaily = value;
+				this.patientInfo.PatientHipCircumference = value;
 			},
 
 			// 测试按钮
