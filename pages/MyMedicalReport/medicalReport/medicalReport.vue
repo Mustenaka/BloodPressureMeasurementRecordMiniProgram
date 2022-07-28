@@ -7,17 +7,17 @@
 
 		<!-- 中部选择框 -->
 		<view class="box">
-			<view class="item">
-				<text @click="toBpr24Hours">24小时动态血压报告</text>
+			<view class="item" @click="toBpr24Hours">
+				<text>24小时动态血压报告</text>
 			</view>
-			<view class="item">
-				<text @click="toEcg24Hours">24小时动态心电图（ECG）</text>
+			<view class="item" @click="toEcg24Hours">
+				<text>24小时动态心电图（ECG）</text>
 			</view>
-			<view class="item">
-				<text @click="toEcg">心电图（ECG）</text>
+			<view class="item" @click="toEcg">
+				<text>心电图（ECG）</text>
 			</view>
-			<view class="item">
-				<text @click="toEchocardiography">心超</text>
+			<view class="item" @click="toEchocardiography">
+				<text>心超</text>
 			</view>
 		</view>
 
@@ -49,7 +49,7 @@
 					animationDuration: 200,
 				});
 			},
-			
+
 			// 跳转到我的检验指标
 			toEcg24Hours() {
 				uni.navigateTo({
@@ -59,7 +59,7 @@
 					animationDuration: 200,
 				});
 			},
-			
+
 			// 跳转到
 			toEcg() {
 				uni.navigateTo({
@@ -69,7 +69,7 @@
 					animationDuration: 200,
 				});
 			},
-			
+
 			// 跳转到
 			toEchocardiography() {
 				uni.navigateTo({
@@ -103,7 +103,7 @@
 			padding: 25rpx;
 			padding-bottom: 60rpx;
 		}
-		
+
 		.header-text {
 			display: flex;
 			flex-wrap: wrap;
