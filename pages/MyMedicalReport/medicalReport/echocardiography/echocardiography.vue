@@ -13,7 +13,7 @@
 					<text>创建时间:{{value.create_at}}</text>
 				</view>
 				<view class="item_detail">
-					<text class="text_right">EF:{{value.ef}}(%) LVIDd:{{value.lvidd}}(mm) LVIDs:{{value.lvids}}(mm)</text>
+					<text class="text_right">LVEF（左心室射血分数）:{{value.ef}}(%) LVIDd（左心室收缩期内径）:{{value.lvidd}}(mm) LVIDs（左心室舒张末期内径）:{{value.lvids}}(mm)</text>
 				</view>
 			</view>
 

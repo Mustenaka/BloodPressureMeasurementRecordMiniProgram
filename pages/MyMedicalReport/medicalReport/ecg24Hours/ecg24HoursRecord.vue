@@ -24,10 +24,10 @@
 			<view class="item">
 				<view class="item_oneLine">
 					<text>平均心率（次/分）</text>
-					<uni-section :title="'低压记录: '+ record.average" type="line" padding>
+					<uni-section :title="'平均心率: '+ record.average" type="line" padding>
 						<uni-number-box :value="record.average" @change="dataChange" :min="0" :max="50000"></uni-number-box>
 					</uni-section>
-					<text>umol/l </text>
+					<text>（次/分）</text>
 				</view>
 			</view>
 			<view class="item">

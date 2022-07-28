@@ -16,25 +16,25 @@
 				</view>
 			</view>
 			<view class="item">
-				<text>EF</text>
+				<text>LVEF（左心室射血分数）</text>
 				<uni-section :title="'低压记录: '+ record.ef" type="line" padding>
 					<uni-number-box :value="record.ef" @change="dataEFChange" :min="0" :max="50000"></uni-number-box>
 				</uni-section>
-				<text>umol/l </text>
+				<text>%</text>
 			</view>
 			<view class="item">
-				<text>LVIDd</text>
+				<text>LVIDd（左心室收缩期内径）</text>
 				<uni-section :title="'低压记录: '+ record.lvidd" type="line" padding>
 					<uni-number-box :value="record.lvidd" @change="dataLVIDdChange" :min="0" :max="50000"></uni-number-box>
 				</uni-section>
-				<text>umol/l </text>
+				<text>mm</text>
 			</view>
 			<view class="item">
-				<text>LVIDs</text>
+				<text>LVIDs（左心室舒张末期内径）</text>
 				<uni-section :title="'低压记录: '+ record.lvids" type="line" padding>
 					<uni-number-box :value="record.lvids" @change="dataLVIDsChange" :min="0" :max="50000"></uni-number-box>
 				</uni-section>
-				<text>umol/l </text>
+				<text>mm</text>
 			</view>
 
 			<view class="item">

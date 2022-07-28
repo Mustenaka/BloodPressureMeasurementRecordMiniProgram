@@ -78,7 +78,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
       max: 5e4
     }),
     i: common_vendor.p({
-      title: "\u4F4E\u538B\u8BB0\u5F55: " + $data.record.average,
+      title: "\u5E73\u5747\u5FC3\u7387: " + $data.record.average,
       type: "line",
       padding: true
     }),
