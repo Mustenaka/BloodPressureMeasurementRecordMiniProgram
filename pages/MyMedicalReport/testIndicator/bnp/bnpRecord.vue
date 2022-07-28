@@ -20,7 +20,7 @@
 				<uni-section :title="'低压记录: '+ record.data" type="line" padding>
 					<uni-number-box :value="record.data" @change="dataChange" :min="0" :max="50000" ></uni-number-box>
 				</uni-section>
-				<text>umol/l </text>
+				<text>pg/ml</text>
 			</view>
 
 			<view class="item">
