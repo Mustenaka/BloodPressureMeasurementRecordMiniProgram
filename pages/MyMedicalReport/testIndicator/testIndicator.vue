@@ -7,11 +7,11 @@
 
 		<!-- 中部选择框 -->
 		<view class="box">
-			<view class="item">
-				<text @click="toBnp">BNP</text>
+			<view class="item" @click="toBnp">
+				<text>BNP</text>
 			</view>
-			<view class="item">
-				<text @click="toCreatinine">肌酐</text>
+			<view class="item" @click="toCreatinine">
+				<text>肌酐</text>
 			</view>
 		</view>
 
@@ -43,7 +43,7 @@
 					animationDuration: 200,
 				});
 			},
-			
+
 			// 跳转到 肌酐
 			toCreatinine() {
 				uni.navigateTo({
@@ -77,7 +77,7 @@
 			padding: 25rpx;
 			padding-bottom: 60rpx;
 		}
-		
+
 		.header-text {
 			display: flex;
 			flex-wrap: wrap;
