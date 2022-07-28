@@ -7,14 +7,14 @@
 
 		<!-- 中部选择框 -->
 		<view class="box">
-			<view class="item">
-				<text @click="toPatientInfo">我的基本情况</text>
+			<view class="item" @click="toPatientInfo">
+				<text>我的基本情况</text>
 			</view>
-			<view class="item">
-				<text @click="toTestIndicator">我的检验指标</text>
+			<view class="item" @click="toTestIndicator">
+				<text>我的检验指标</text>
 			</view>
-			<view class="item">
-				<text @click="toMedicalReport">我的检查报告</text>
+			<view class="item" @click="toMedicalReport">
+				<text>我的检查报告</text>
 			</view>
 		</view>
 
@@ -40,7 +40,7 @@
 					animationDuration: 200,
 				});
 			},
-			
+
 			// 跳转到 我的检验指标
 			toTestIndicator() {
 				uni.navigateTo({
@@ -50,7 +50,7 @@
 					animationDuration: 200,
 				});
 			},
-			
+
 			// 跳转到 我的检查报告
 			toMedicalReport() {
 				uni.navigateTo({
@@ -84,7 +84,7 @@
 			padding: 25rpx;
 			padding-bottom: 60rpx;
 		}
-		
+
 		.header-text {
 			display: flex;
 			flex-wrap: wrap;
